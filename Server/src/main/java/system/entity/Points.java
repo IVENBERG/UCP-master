@@ -1,4 +1,4 @@
-package ucp.model;
+package system.entity;
 
 import javax.persistence.*;
 import java.util.Collection;

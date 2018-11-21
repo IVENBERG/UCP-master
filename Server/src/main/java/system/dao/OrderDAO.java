@@ -1,8 +1,8 @@
-package ucp.dao;
+package system.dao;
 
 
 
-import ucp.model.Order;
+import system.entity.Order;
 
 import java.util.List;
 

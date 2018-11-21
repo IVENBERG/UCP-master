@@ -1,10 +1,10 @@
-package ucp.logic;
+package system.service;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpEntity;
-import ucp.model.Points;
-import ucp.service.PointsServiceImpl;
+import system.dao.PointsDAOImpl;
+import system.entity.Points;
 
 import java.io.IOException;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.List;
 public class PointsLogic {
     public boolean addPoint(HttpEntity<String> request) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        PointsServiceImpl pointsService = new PointsServiceImpl();
+        PointsDAOImpl pointsService = new PointsDAOImpl();
         Points points = new Points();
         JsonNode actualObj = mapper.readTree(request.getBody());
 

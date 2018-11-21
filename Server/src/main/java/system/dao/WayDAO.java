@@ -1,8 +1,8 @@
-package ucp.dao;
+package system.dao;
 
 
 
-import ucp.model.Way;
+import system.entity.Way;
 
 import java.util.List;
 

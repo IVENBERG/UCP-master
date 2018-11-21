@@ -1,8 +1,8 @@
-package ucp.dao;
+package system.dao;
 
 
 
-import ucp.model.Points;
+import system.entity.Points;
 
 import java.util.List;
 

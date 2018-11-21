@@ -4,24 +4,24 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:mysql://localhost:3306/project</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/ucp?useLegacyDatetimeCode=false&amp;characterEncoding=UTF8&amp;serverTimezone=UTC&amp;autoReconnect=true&amp;useSSL=false</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="connection.username">root</property>
-        <property name="connection.password">1772001748602Oleg!</property>
-        <property name="hbm2ddl.auto">update</property>
+        <property name="connection.password">root</property>
         <property name="show_sql">false</property>
         <property name="format_sql">false</property>
         <property name="use_sql_comments">false</property>
 
 
-        <mapping class="system.entity.ContactinformationEntity"></mapping>
-        <mapping class="system.entity.CategoryOfServicesEntity"></mapping>
-        <mapping class="system.entity.MasterEntity"></mapping>
-        <mapping class="system.entity.ServiceEntity"></mapping>
-        <mapping class="system.entity.ServiceFormEntity"></mapping>
-        <mapping class="system.entity.UsersEntity"></mapping>
+        <mapping class="system.entity.Lines"></mapping>
+        <mapping class="system.entity.Order"></mapping>
+        <mapping class="system.entity.Points"></mapping>
+        <mapping class="system.entity.Transport"></mapping>
+        <mapping class="system.entity.User"></mapping>
+        <mapping class="system.entity.WayInfo"></mapping>
+        <mapping class="system.entity.Way"></mapping>
 
     </session-factory>
 </hibernate-configuration>

@@ -1,54 +1,43 @@
-package ucp.dao;
+package system.dao;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Repository;
-import ucp.model.Way;
+import system.entity.Way;
+import system.hibernateConfig.SessionUtil;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
-@Repository
-@Transactional
-public class WayDAOImpl implements WayDAO {
-    private static final Logger logger = LoggerFactory.getLogger(LinesDAOImpl.class);
 
-    private SessionFactory sessionFactory;
+public class WayDAOImpl extends SessionUtil implements WayDAO {
 
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
-
-    @Override
     public void add(Way way) {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         session.save(way);
-        logger.info("Way successfully saved.");
+        closeTransactionSession();
     }
 
-    @Override
     public List<Way> getWay() {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         List<Way> userWay = session.createQuery("from Way ").list();
+        closeTransactionSession();
         return userWay;
     }
 
-    @Override
     public void update(Way way) {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         session.update(way);
-        logger.info("Way successfully update.");
+        closeTransactionSession();
     }
 
-    @Override
     public void remove(Way way) {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         Way currentWay = (Way) session.load(Way.class, new Integer(way.getId()));
         if(currentWay != null){
             session.delete(currentWay);
         }
-        logger.info("Way successfully remuved.");
+        closeTransactionSession();
     }
 }

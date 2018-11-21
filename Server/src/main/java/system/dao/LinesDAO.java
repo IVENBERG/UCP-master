@@ -1,8 +1,8 @@
-package ucp.dao;
+package system.dao;
 
 
 
-import ucp.model.Lines;
+import system.entity.Lines;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package ucp.controller;
+package system.controller;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import ucp.logic.JsonGenerator;
-import ucp.logic.PointsLogic;
+import system.service.JsonGenerator;
+import system.service.PointsLogic;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -22,6 +22,7 @@ public class ManagerController {
 
     @RequestMapping(value = "/addpoin", method = RequestMethod.POST)
     public @ResponseBody String addPoint(HttpEntity<String> request) throws IOException, JSONException, SQLException {
+        System.out.println(request.toString());
         PointsLogic pointLogic = new PointsLogic();
         JsonGenerator jsonGenerator = new JsonGenerator();
         if(pointLogic.addPoint(request) == true)

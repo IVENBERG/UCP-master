@@ -1,54 +1,46 @@
-package ucp.dao;
+package system.dao;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Repository;
-import ucp.model.WayInfo;
+import system.entity.WayInfo;
+import system.hibernateConfig.SessionUtil;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
-@Repository
-@Transactional
-public class WayInfoDAOImpl implements WayInfoDAO {
-    private static final Logger logger = LoggerFactory.getLogger(LinesDAOImpl.class);
 
-    private SessionFactory sessionFactory;
+public class WayInfoDAOImpl extends SessionUtil implements WayInfoDAO {
 
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
-
-    @Override
     public void add(WayInfo wayInfo) {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         session.save(wayInfo);
-        logger.info("WayInfo successfully saved.");
+        closeTransactionSession();
     }
 
     @Override
     public List<WayInfo> getWayInfo() {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         List<WayInfo> userWayInfo = session.createQuery("from WayInfo ").list();
+        closeTransactionSession();
         return userWayInfo;
     }
 
     @Override
     public void update(WayInfo wayInfo) {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         session.update(wayInfo);
-        logger.info("WayInfo successfully update.");
+        closeTransactionSession();
     }
 
     @Override
     public void remove(WayInfo wayInfo) {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         WayInfo currentWayInfo = (WayInfo) session.load(WayInfo.class, new Integer(wayInfo.getId()));
         if(currentWayInfo != null){
             session.delete(currentWayInfo);
         }
-        logger.info("WayInfo successfully remuved.");
+        closeTransactionSession();
     }
 }

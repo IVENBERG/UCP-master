@@ -1,8 +1,8 @@
-package ucp.dao;
+package system.dao;
 
 
 
-import ucp.model.Transport;
+import system.entity.Transport;
 
 import java.util.List;
 

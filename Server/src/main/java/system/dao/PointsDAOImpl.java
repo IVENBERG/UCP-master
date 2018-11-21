@@ -1,54 +1,43 @@
-package ucp.dao;
+package system.dao;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.stereotype.Repository;
-import ucp.model.Points;
+import system.entity.Points;
+import system.hibernateConfig.SessionUtil;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
-@Repository
-@Transactional
-public class PointsDAOImpl implements PointsDAO {
-    private static final Logger logger = LoggerFactory.getLogger(LinesDAOImpl.class);
 
-    private SessionFactory sessionFactory;
+public class PointsDAOImpl extends SessionUtil implements PointsDAO {
 
-    public void setSessionFactory(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
-
-    @Override
     public void add(Points points) {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         session.save(points);
-        logger.info("Point successfully saved.");
+        closeTransactionSession();
     }
 
-    @Override
     public List<Points> getPoints() {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         List<Points> userPoints = session.createQuery("from Points ").list();
+        closeTransactionSession();
         return userPoints;
     }
 
-    @Override
     public void update(Points points) {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         session.update(points);
-        logger.info("Point successfully update.");
+        closeTransactionSession();
     }
 
-    @Override
     public void remove(Points points) {
-        Session session = this.sessionFactory.getCurrentSession();
+        openTransactionSession();
+        Session session = openSession();
         Points currentPoints = (Points) session.load(Points.class, new Integer(points.getIdPoint()));
         if(currentPoints != null){
             session.delete(currentPoints);
         }
-        logger.info("Point successfully remuved.");
+        closeTransactionSession();
     }
 }

@@ -1,9 +1,9 @@
-package ucp.dao;
+package system.dao;
 
 
 
 
-import ucp.model.User;
+import system.entity.User;
 
 import java.util.List;
 
