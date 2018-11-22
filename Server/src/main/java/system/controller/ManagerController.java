@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import system.service.JsonGenerator;
 import system.service.PointsLogic;
+import system.service.WayLogic;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -37,7 +38,7 @@ public class ManagerController {
 
     @RequestMapping(value = "/addway", method = RequestMethod.POST)
     public @ResponseBody String addWay(HttpEntity<String> request) throws IOException, JSONException, SQLException {
-        /*WayClass wayClass = new WayClass();
+        WayLogic wayClass = new WayLogic();
         if(wayClass.addWay(request)){
             JSONObject response = new JSONObject();
             response.put("success",true);
@@ -49,8 +50,7 @@ public class ManagerController {
             response.put("success",false);
 
             return response.toString();
-        }*/
-        return "";
+        }
     }
 
     @RequestMapping(value = "/allways", method = RequestMethod.GET, produces = "application/json; charset=utf-8")

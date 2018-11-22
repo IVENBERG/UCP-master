@@ -7,477 +7,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d6af6233-a7a5-4b5a-b14b-a84ff4daad36" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_50.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_cryptacular_cryptacular_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180130.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_passay_passay_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/controller/NewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/LinesDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/LinesDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/OrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/OrderDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/PointsDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/PointsDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/TransportDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/TransportDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/UserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/UserDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/WayDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/WayDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/WayInfoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/dao/WayInfoDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/entity/Lines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/entity/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/entity/Points.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/entity/Transport.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/entity/Way.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/entity/WayInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/system/service/PointsLogic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/PTS-bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/PTS-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/Roboto-Medium-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/Roboto-Medium-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/Roboto-Medium-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/Roboto-Medium-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/Roboto-Regular-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/Roboto-Regular-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/Roboto-Regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/Roboto-Regular-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/font-license.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixfa-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixfa-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixfa-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixfa-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixfa-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixmdi-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixmdi-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixmdi-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixmdi-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/fonts/webixmdi-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/webix.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/css/webix_user.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/img/fon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/img/logistic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/img/partners.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/i18n/en.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/i18n/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/user.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/webix.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/UsersSystem_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/UsersSystem_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/d200262d-08c7-46a3-9b10-106c030eb251.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/d200262d-08c7-46a3-9b10-106c030eb251.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/system/service/WayLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UsersSystem.iml" beforeDir="false" afterPath="$PROJECT_DIR$/UsersSystem.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/anotherClass/AnotherClass.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/AddInformationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/ContactInformationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/MoveController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/RegistrationAndAuthorisationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/dao/CategoryOfServicesDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/dao/ContactinformationDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/dao/MasterDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/dao/ServiceDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/dao/ServiceFormDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/dao/UsersDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/entity/CategoryOfServicesEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/entity/ContactinformationEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/entity/MasterEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/entity/ServiceEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/entity/ServiceFormEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/entity/UsersEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/service/CategoryOfServicesService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/service/ContactinformationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/service/MasterService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/service/ServiceFormService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/service/ServiceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/service/UsersService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/animations.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/flex_slide01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/06.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/35.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/37.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/38.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/39.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/gallery/41.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/shoppingbag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/example/team/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/fontello.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/fontello.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/fontello.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/fontello.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/rt-icons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/rt-icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/rt-icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/rt-icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/socialico-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/socialico-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/socialico-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/fonts/socialico-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/AjaxLoader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/bg_color_section.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/bg_dark_section.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/bx_loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/controls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/fs.pager.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/fs.prevnext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/fs.spinner.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/grabbing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/loading_dark.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_rounded/btnNext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_rounded/btnPrevious.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_rounded/contentPattern.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_rounded/default_thumbnail.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_rounded/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_rounded/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_square/btnNext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_square/btnPrevious.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_square/contentPattern.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_square/default_thumbnail.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_square/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/dark_square/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/default/default_thumb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/default/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/default/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/default/sprite_next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/default/sprite_prev.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/default/sprite_x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/default/sprite_y.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_rounded/btnNext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_rounded/btnPrevious.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_rounded/default_thumbnail.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_rounded/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_rounded/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_square/btnNext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_square/btnPrevious.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_square/default_thumbnail.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_square/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/img/prettyPhoto/light_square/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/plugins.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/grid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/hoverIntent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jflickrfeed.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery-1.11.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery-1.11.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery-migrate-1.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.actual.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.appear.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.bxslider.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.countTo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.easing.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.easypiechart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.elastislide.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.fitvids.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.flexslider-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.fractionslider.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.funnyText.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.isotope.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.localscroll-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.nicescroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.parallax-1.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.prettyPhoto.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.scrollTo-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.sticky.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.timelinr-0.9.54.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquery.ui.totop.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/jquerypp.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/modernizr-2.6.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/placeholdem.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/respond.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/vendor/superfish.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/404.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/about.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/apple-touch-icon-precomposed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/brow.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/contact.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/depil.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/form.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/formEdit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/gallery.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hair.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/htaccess.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/kosm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/makeup.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/nail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/perm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/spa.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Project-Complite.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/hibernateConfig/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/hibernateConfig/HibernateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/hibernateConfig/SessionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/hibernateConfig/SessionUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/css/animations.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/flex_slide01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/06.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/35.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/37.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/38.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/39.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/gallery/41.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/shoppingbag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/example/team/12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/fontello.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/fontello.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/fontello.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/fontello.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/rt-icons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/rt-icons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/rt-icons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/rt-icons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/socialico-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/socialico-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/socialico-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/fonts/socialico-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/AjaxLoader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/bg_color_section.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/bg_dark_section.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/bx_loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/controls.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/fs.pager.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/fs.prevnext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/fs.spinner.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/grabbing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/loading_dark.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_rounded/btnNext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_rounded/btnPrevious.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_rounded/contentPattern.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_rounded/default_thumbnail.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_rounded/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_rounded/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_square/btnNext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_square/btnPrevious.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_square/contentPattern.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_square/default_thumbnail.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_square/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/dark_square/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/default/default_thumb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/default/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/default/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/default/sprite_next.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/default/sprite_prev.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/default/sprite_x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/default/sprite_y.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_rounded/btnNext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_rounded/btnPrevious.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_rounded/default_thumbnail.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_rounded/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_rounded/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_square/btnNext.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_square/btnPrevious.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_square/default_thumbnail.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_square/loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/img/prettyPhoto/light_square/sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/plugins.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/grid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/hoverIntent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jflickrfeed.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery-1.11.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery-1.11.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery-migrate-1.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.actual.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.appear.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.bxslider.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.countTo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.easing.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.easypiechart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.elastislide.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.fitvids.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.flexslider-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.fractionslider.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.funnyText.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.isotope.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.localscroll-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.nicescroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.parallax-1.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.prettyPhoto.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.scrollTo-min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.sticky.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.timelinr-0.9.54.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquery.ui.totop.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/jquerypp.custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/modernizr-2.6.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/placeholdem.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/respond.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/js/vendor/superfish.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/404.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/about.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/apple-touch-icon-precomposed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/brow.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/contact.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/depil.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/form.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/formEdit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/gallery.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/hair.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/htaccess.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/kosm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/makeup.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/nail.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/perm.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/pages/spa.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/spring/spring-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/spring/spring-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/anotherClass/AnotherClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/controller/AddInformationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/controller/ContactInformationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/controller/MoveController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/controller/RegistrationAndAuthorisationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/dao/CategoryOfServicesDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/dao/ContactinformationDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/dao/MasterDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/dao/ServiceDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/dao/ServiceFormDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/dao/UsersDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/entity/CategoryOfServicesEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/entity/ContactinformationEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/entity/MasterEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/entity/ServiceEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/entity/ServiceFormEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/entity/UsersEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/service/CategoryOfServicesService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/service/ContactinformationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/service/JsonGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/service/JsonGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/service/MasterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/service/ServiceFormService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/service/ServiceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Project-Complite/WEB-INF/classes/system/service/UsersService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/anotherClass/AnotherClass.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/controller/AddInformationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/controller/ContactInformationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/controller/MoveController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/controller/RegistrationAndAuthorisationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/dao/CategoryOfServicesDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/dao/ContactinformationDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/dao/MasterDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/dao/ServiceDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/dao/ServiceFormDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/dao/UsersDAO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/entity/CategoryOfServicesEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/entity/ContactinformationEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/entity/MasterEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/entity/ServiceEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/entity/ServiceFormEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/entity/UsersEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/hibernateConfig/HibernateUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/system/hibernateConfig/HibernateUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/hibernateConfig/SessionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/system/hibernateConfig/SessionUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/service/CategoryOfServicesService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/service/ContactinformationService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/service/MasterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/service/ServiceFormService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/service/ServiceService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/system/service/UsersService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/system/service/JsonGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/system/service/JsonGenerator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -530,32 +97,32 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="247" />
+          <entry key="java" value="409" />
           <entry key="txt" value="3" />
-          <entry key="xml" value="71" />
+          <entry key="xml" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="247" />
+          <entry key="JAVA" value="409" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="XML" value="71" />
+          <entry key="XML" value="103" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="52" />
-          <entry key="js" value="1" />
-          <entry key="points" value="1" />
-          <entry key="xml" value="11" />
+          <entry key="java" value="60" />
+          <entry key="js" value="2" />
+          <entry key="points" value="4" />
+          <entry key="xml" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Database Element" value="1" />
-          <entry key="JAVA" value="52" />
-          <entry key="JavaScript" value="1" />
-          <entry key="XML" value="11" />
+          <entry key="Database Element" value="4" />
+          <entry key="JAVA" value="60" />
+          <entry key="JavaScript" value="2" />
+          <entry key="XML" value="14" />
         </counts>
       </usages-collector>
     </session>
@@ -564,14 +131,48 @@
     <favorites_list name="UsersSystem" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="39" column="65" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/service/WayLogic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/system/service/PointsLogic.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -586,13 +187,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/system/anotherClass/ReturnClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/dao/UsersDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/entity/CategoryOfServicesEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/service/UsersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/entity/ServiceFormEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/dao/ServiceFormDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/service/ServiceFormService.java" />
@@ -619,8 +219,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/404.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/about.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/system/entity/LinesModel.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/system/entity/Lines.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/dao/LinesDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/dao/OrderDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/dao/PointsDAO.java" />
@@ -635,11 +233,17 @@
         <option value="$PROJECT_DIR$/src/main/java/system/dao/UserDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/dao/WayDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/dao/WayInfoDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/system/service/PointsLogic.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring/spring-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/entity/Lines.java" />
+        <option value="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/system/hibernateConfig/SessionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/system/service/WayLogick.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/system/service/WayLogic.java" />
       </list>
     </option>
   </component>
@@ -679,19 +283,15 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1010" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="width" value="960" />
+    <option name="height" value="1032" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
       <profile-state>
         <expanded-state>
-          <State>
-            <id />
-          </State>
+          <State />
           <State>
             <id>XML</id>
           </State>
@@ -704,12 +304,15 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -759,14 +362,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UsersSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UsersSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -774,20 +370,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UsersSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Server" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -795,11 +382,11 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="d200262d-08c7-46a3-9b10-106c030eb251" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542804604581" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542903503849" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -1142,14 +729,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108360000" />
+    <option name="totallyTimeSpent" value="111367000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4967213" visible="true" weight="0.2647504" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74590164" visible="true" weight="0.21709532" />
       <window_info id="Structure" order="1" weight="0.24962178" />
-      <window_info id="Persistence" order="2" sideWeight="0.5032787" side_tool="true" weight="0.25718608" />
+      <window_info id="Persistence" order="2" sideWeight="0.25409836" side_tool="true" visible="true" weight="0.21709532" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -1158,7 +746,6 @@
       <window_info id="Web" order="8" side_tool="true" />
       <window_info id="Favorites" order="9" side_tool="true" />
       <window_info id="Learn" order="10" />
-      <window_info anchor="bottom" id="Database Console" weight="0.3295082" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.46721312" />
@@ -1174,6 +761,7 @@
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Application Servers" order="13" weight="0.3295082" />
       <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3295082" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1186,6 +774,46 @@
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.30786687" />
       <window_info anchor="right" id="Database" order="10" weight="0.1860817" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967213" visible="true" weight="0.2685325" />
+      <window_info id="Structure" order="1" weight="0.24962178" />
+      <window_info id="Persistence" order="2" sideWeight="0.5032787" side_tool="true" weight="0.25718608" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Image Layers" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Nl-Palette" order="7" />
+      <window_info id="Web" order="8" side_tool="true" />
+      <window_info id="Favorites" order="9" side_tool="true" />
+      <window_info id="Learn" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.46721312" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.3295082" />
+      <window_info anchor="bottom" id="Java Enterprise" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Application Servers" order="13" weight="0.3295082" />
+      <window_info anchor="bottom" id="Messages" order="14" />
+      <window_info anchor="bottom" id="Database Console" order="15" weight="0.3295082" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Maven Projects" order="5" weight="0.16111952" />
+      <window_info anchor="right" id="Properties" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" weight="0.30786687" />
+      <window_info active="true" anchor="right" id="Database" order="10" visible="true" weight="0.1860817" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1198,10 +826,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/css/main.css" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/hair.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/kosm.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/makeup.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/nail.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/perm.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/spa.jsp" />
@@ -1337,34 +961,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2023">
-          <caret line="119" column="34" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/entity/WayInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/PointsLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="27" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1378,54 +978,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/i18n/en.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="das://d200262d-08c7-46a3-9b10-106c030eb251/schema/ucp/table/points">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="60" lean-forward="true" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
-          <folding>
-            <element signature="e#354#359#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/hibernateConfig/SessionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/dao/PointsDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="169">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/entity/Lines.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1440,6 +996,106 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/entity/Lines.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/hibernateConfig/SessionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+          <folding>
+            <element signature="method#openTransactionSession#0;class#SessionUtil#0" />
+            <element signature="method#closeTransactionSession#0;class#SessionUtil#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d200262d-08c7-46a3-9b10-106c030eb251/schema/ucp/table/points">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="72" selection-start-line="13" selection-start-column="72" selection-end-line="13" selection-end-column="72" />
+          <folding>
+            <element signature="e#354#359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="202" column="9" selection-start-line="202" selection-start-column="9" selection-end-line="202" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/WayLogick.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="39" column="65" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/PointsLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/WayLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -1497,7 +1153,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Hibernate|UsersSystem</last-edited>
+          <last-edited>Spring|UsersSystem</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

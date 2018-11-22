@@ -11,6 +11,7 @@ public class JsonGenerator {
     public String generateSuccessFalseJson() {
         JSONObject response = new JSONObject();
         response.put("success",false);
+        response.put("message","Такая точка уже существует! Валера, иди в жопу!");
         return response.toString();
     }
 }
