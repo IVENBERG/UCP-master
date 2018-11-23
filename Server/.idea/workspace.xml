@@ -6,12 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d6af6233-a7a5-4b5a-b14b-a84ff4daad36" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/system/service/PointsLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/system/service/PointsLogic.java" afterDir="false" />
-    </list>
+    <list default="true" id="d6af6233-a7a5-4b5a-b14b-a84ff4daad36" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,69 +94,7 @@
     <favorites_list name="UsersSystem" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="103" column="39" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/system/service/WayLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/system/service/PointsLogic.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="48" column="33" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#addPoint#0;class#PointsLogic#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#generateObjectForAllPoints#0;class#JsonGenerator#0" />
-                <element signature="method#generateSuccessTrueJson#0;class#JsonGenerator#0" />
-                <element signature="method#generateSuccessFalseJson#0;class#JsonGenerator#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://d200262d-08c7-46a3-9b10-106c030eb251/schema/ucp/table/points">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -722,20 +655,19 @@
       <workItem from="1542803137585" duration="1462000" />
       <workItem from="1542805097273" duration="1680000" />
       <workItem from="1542982125222" duration="199000" />
-      <workItem from="1542983422438" duration="2837000" />
+      <workItem from="1542983422438" duration="3097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114713000" />
+    <option name="totallyTimeSpent" value="114973000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.742623" visible="true" weight="0.22314675" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.74153847" visible="true" weight="0.22314675" />
       <window_info id="Structure" order="1" weight="0.24962178" />
-      <window_info id="Persistence" order="2" sideWeight="0.25737706" side_tool="true" visible="true" weight="0.22314675" />
+      <window_info id="Persistence" order="2" sideWeight="0.25846153" side_tool="true" visible="true" weight="0.22314675" />
       <window_info id="Designer" order="3" />
       <window_info id="Image Layers" order="4" />
       <window_info id="UI Designer" order="5" />
@@ -746,7 +678,7 @@
       <window_info id="Learn" order="10" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.46721312" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46721312" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -770,7 +702,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" weight="0.30786687" />
-      <window_info active="true" anchor="right" id="Database" order="10" visible="true" weight="0.1860817" />
+      <window_info anchor="right" id="Database" order="10" visible="true" weight="0.1860817" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4967213" visible="true" weight="0.2685325" />
@@ -1034,23 +966,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/service/WayLogick.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/WayLogic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="103" column="39" selection-start-line="103" selection-start-column="30" selection-end-line="103" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+    <entry file="das://d200262d-08c7-46a3-9b10-106c030eb251/schema/ucp/table/points">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1065,22 +984,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://d200262d-08c7-46a3-9b10-106c030eb251/schema/ucp/table/points">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/service/WayLogic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/system/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="94" column="35" lean-forward="true" selection-start-line="94" selection-start-column="35" selection-end-line="94" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/system/service/JsonGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="221">
+          <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#generateObjectForAllPoints#0;class#JsonGenerator#0" />
             <element signature="method#generateSuccessTrueJson#0;class#JsonGenerator#0" />
             <element signature="method#generateSuccessFalseJson#0;class#JsonGenerator#0" />
+            <element signature="method#generateAllPoints#0;class#JsonGenerator#0" />
           </folding>
         </state>
       </provider>
