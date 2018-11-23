@@ -22,7 +22,7 @@ public class PointsLogic {
         List<Points> pointsList = pointsService.getPoints();
 
         if(region.equals("")) {
-            String name = country+" "+city;
+            String name = country+", г."+city;
             points.setName(name);
             for(Points point : pointsList)
             {
@@ -34,7 +34,7 @@ public class PointsLogic {
             return true;
         }
         else{
-            String name = country+" "+region+" "+city;
+            String name = country+", "+region+" обл., г."+city;
             points.setName(name);
             for(Points point : pointsList)
             {
