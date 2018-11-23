@@ -46,4 +46,10 @@ public class PointsLogic {
             return true;
         }
     }
+    public String returnAllPoints(){
+        JsonGenerator jsonGenerator = new JsonGenerator();
+        PointsDAOImpl pointsService = new PointsDAOImpl();
+        List<Points> pointsList = pointsService.getPoints();
+        return jsonGenerator.generateAllPoints(pointsList);
+    }
 }

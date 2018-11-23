@@ -100,4 +100,10 @@ public class ManagerController {
 
         return response.toString();
     }
+
+    @RequestMapping(value = "/allPoints", method = RequestMethod.GET)
+    public @ResponseBody String getAllPoints() throws JSONException {
+        PointsLogic pointsLogic = new PointsLogic();
+        return pointsLogic.returnAllPoints();
+    }
 }
