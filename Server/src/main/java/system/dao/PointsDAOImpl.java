@@ -24,6 +24,15 @@ public class PointsDAOImpl extends SessionUtil implements PointsDAO {
         return userPoints;
     }
 
+
+    public Points getPointsID(int id) {
+        openTransactionSession();
+        Session session = openSession();
+        Points userPoints = (Points) session.createQuery("from Points where id_point = " + id).uniqueResult();
+        closeTransactionSession();
+        return userPoints;
+    }
+
     public void update(Points points) {
         openTransactionSession();
         Session session = openSession();

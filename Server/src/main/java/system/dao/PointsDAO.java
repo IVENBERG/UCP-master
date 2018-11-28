@@ -11,4 +11,5 @@ public interface PointsDAO {
     List<Points> getPoints();
     void update(Points points);
     void remove(Points points);
+    Points getPointsID(int id);
 }

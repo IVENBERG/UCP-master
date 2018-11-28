@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import system.dao.PointsDAOImpl;
 import system.service.JsonGenerator;
+import system.service.OrderLogic;
 import system.service.PointsLogic;
 import system.service.WayLogic;
 
@@ -39,6 +41,7 @@ public class ManagerController {
     @RequestMapping(value = "/addway", method = RequestMethod.POST)
     public @ResponseBody String addWay(HttpEntity<String> request) throws IOException, JSONException, SQLException {
         WayLogic wayClass = new WayLogic();
+        wayClass.addWay(request);
         if(wayClass.addWay(request)){
             JSONObject response = new JSONObject();
             response.put("success",true);
@@ -84,20 +87,15 @@ public class ManagerController {
 
     @RequestMapping(value = "/orders", method = RequestMethod.GET)
     public @ResponseBody String viewOrders() throws JSONException {
-        JSONObject response = new JSONObject();
-        response.put("success",true);
-
-
-        return response.toString();
+        OrderLogic orderLogic = new OrderLogic();
+        return orderLogic.getOrders();
     }
 
     @RequestMapping(value = "/order/{id}/{status}", method = RequestMethod.GET)
     public @ResponseBody String order(@PathVariable int id,@PathVariable String status) throws JSONException {
         JSONObject response = new JSONObject();
-        response.put("success",true);
-
-        System.out.println(id+" "+status);
-
+        OrderLogic orderLogic = new OrderLogic();
+        response.put("success", orderLogic.updateOrder(id, status));
         return response.toString();
     }
 

@@ -14,6 +14,12 @@ public class Order {
     @Column(name = "price")
     private double price;
 
+    @Column(name = "status")
+    private String status;
+
+    @Column(name = "time")
+    private String time;
+
     @ManyToOne(optional=false)
     @JoinColumn(name="id_user")
     private User user;
@@ -47,6 +53,18 @@ public class Order {
     public void setWay(Way way) {
         this.way = way;
     }
+    public String getStatus() {
+        return status;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+    }
+    public String getTime() {
+        return time;
+    }
+    public void setTime(String time) {
+        this.time = time;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -55,12 +73,14 @@ public class Order {
         Order order = (Order) o;
         return idOrder == order.idOrder &&
                 Double.compare(order.price, price) == 0 &&
+                Objects.equals(status, order.status) &&
+                Objects.equals(time, order.time) &&
                 Objects.equals(user, order.user) &&
                 Objects.equals(way, order.way);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idOrder, price, user, way);
+        return Objects.hash(idOrder, price, status, time, user, way);
     }
 }

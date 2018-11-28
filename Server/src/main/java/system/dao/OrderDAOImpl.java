@@ -24,6 +24,22 @@ public class OrderDAOImpl extends SessionUtil implements OrderDAO {
         return userOrder;
     }
 
+    public List<Order> getNewOrders() {
+        openTransactionSession();
+        Session session = openSession();
+        List<Order> userOrder = session.createQuery("from Order where status = 'new'").list();
+        closeTransactionSession();
+        return userOrder;
+    }
+
+    public Order getOrder(int id) {
+        openTransactionSession();
+        Session session = openSession();
+        Order userOrder = (Order) session.createQuery("from Order where id_order").uniqueResult();
+        closeTransactionSession();
+        return userOrder;
+    }
+
     public void update(Order order) {
         openTransactionSession();
         Session session = openSession();

@@ -24,6 +24,14 @@ public class WayDAOImpl extends SessionUtil implements WayDAO {
         return userWay;
     }
 
+    public Way getWayID(int id) {
+        openTransactionSession();
+        Session session = openSession();
+        Way userWay = (Way) session.createQuery("from Way where Way.id = " + id);
+        closeTransactionSession();
+        return userWay;
+    }
+
     public void update(Way way) {
         openTransactionSession();
         Session session = openSession();

@@ -11,4 +11,5 @@ public interface TransportDAO {
     List<Transport> getTransport();
     void update(Transport transport);
     void remove(Transport transport);
+    Transport getTransportName(String name);
 }

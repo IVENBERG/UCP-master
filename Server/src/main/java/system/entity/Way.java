@@ -20,6 +20,14 @@ public class Way {
     private WayInfo wayInfo;
 
     @ManyToOne(optional=false)
+    @JoinColumn(name="start_point")
+    private Points startPoint;
+
+    @ManyToOne(optional=false)
+    @JoinColumn(name="end_point")
+    private Points endPoint;
+
+    @ManyToOne(optional=false)
     @JoinColumn(name="id_line")
     private Lines lines;
 
