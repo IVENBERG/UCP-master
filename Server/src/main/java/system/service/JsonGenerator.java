@@ -12,6 +12,17 @@ import java.util.List;
 public class JsonGenerator {
     public JSONObject generateObjectForAllWays(Way way){
         JSONObject viewPoint = new JSONObject();
+        viewPoint.put("id", way.getPosition());
+        viewPoint.put("pointA", way.getLine().getStartPoint().getName());
+        viewPoint.put("pointB", way.getLine().getEndPoint().getName());
+        viewPoint.put("dist", way.getLine().getDistance());
+        viewPoint.put("cost", 20202002);
+        double time = way.getLine().getDistance() / way.getLine().getTransport().getSpeed();
+        viewPoint.put("time", time);
+        return viewPoint;
+    }
+    public JSONObject generateObjectForWay(Way way){
+        JSONObject viewPoint = new JSONObject();
         viewPoint.put("pos", way.getPosition());
         viewPoint.put("firstpoint", way.getLine().getStartPoint().getName());
         viewPoint.put("secondpoint", way.getLine().getEndPoint().getName());
@@ -57,6 +68,18 @@ public class JsonGenerator {
 
         for (Iterator<Way> it = wayList.iterator(); it.hasNext(); ) {
             employees.put(generateObjectForAllWays(it.next()));
+        }
+        response.put("success",true);
+        response.put("data",employees);
+
+        return response.toString();
+    }
+    public String generateWay(List<Way> wayList){
+        JSONArray employees = new JSONArray();
+        JSONObject response = new JSONObject();
+
+        for (Iterator<Way> it = wayList.iterator(); it.hasNext(); ) {
+            employees.put(generateObjectForWay(it.next()));
         }
         response.put("success",true);
         response.put("data",employees);

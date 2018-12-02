@@ -74,7 +74,7 @@ public class ManagerController {
         OrderLogic orderLogic = new OrderLogic();
         return orderLogic.getOrders();
     }
-
+    //success
     @RequestMapping(value = "/order/{id}/{status}", method = RequestMethod.GET)
     public @ResponseBody String order(@PathVariable int id,@PathVariable String status) throws JSONException {
         JSONObject response = new JSONObject();
@@ -82,7 +82,6 @@ public class ManagerController {
         response.put("success", orderLogic.updateOrder(id, status));
         return response.toString();
     }
-
     //success
     @RequestMapping(value = "/allPoints", method = RequestMethod.GET)
     public @ResponseBody String getAllPoints() throws JSONException {
