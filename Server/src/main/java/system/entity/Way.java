@@ -2,10 +2,9 @@ package system.entity;
 
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.Objects;
 
 @Entity
-@Table(name = "way")
+@Table(name="way")
 public class Way {
     @Id
     @Column(name = "id")
@@ -20,20 +19,8 @@ public class Way {
     private WayInfo wayInfo;
 
     @ManyToOne(optional=false)
-    @JoinColumn(name="start_point")
-    private Points startPoint;
-
-    @ManyToOne(optional=false)
-    @JoinColumn(name="end_point")
-    private Points endPoint;
-
-    @ManyToOne(optional=false)
     @JoinColumn(name="id_line")
-    private Lines lines;
-
-    @OneToMany(mappedBy="way")
-    private Collection<Order> orders;
-
+    private Lines line;
 
     public int getId() {
         return id;
@@ -53,34 +40,30 @@ public class Way {
     public void setWayInfo(WayInfo wayInfo) {
         this.wayInfo = wayInfo;
     }
-    public Lines getLines() {
-        return lines;
+    public Lines getLine() {
+        return line;
     }
-    public void setLines(Lines lines) {
-        this.lines = lines;
+    public void setLine(Lines line) {
+        this.line = line;
     }
-    public Collection<Order> getOrders() {
-        return orders;
-    }
-    public void setOrders(Collection<Order> orders) {
-        this.orders = orders;
-    }
-
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Way way = (Way) o;
-        return id == way.id &&
-                position == way.position &&
-                Objects.equals(wayInfo, way.wayInfo) &&
-                Objects.equals(lines, way.lines) &&
-                Objects.equals(orders, way.orders);
+
+        if (id != way.id) return false;
+        if (position != way.position) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, position, wayInfo, lines, orders);
+        int result = id;
+        result = 31 * result + position;
+        return result;
     }
 }

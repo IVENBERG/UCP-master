@@ -10,19 +10,20 @@
         <property name="hibernate.current_session_context_class">thread</property>
         <property name="connection.username">root</property>
         <property name="connection.password">root</property>
-        <property name="show_sql">false</property>
+        <property name="show_sql">true</property>
         <property name="hibernate.connection.autocommit">true</property>
-        <property name="format_sql">false</property>
-        <property name="use_sql_comments">false</property>
+        <property name="format_sql">true</property>
+        <property name="use_sql_comments">true</property>
 
 
         <mapping class="system.entity.Lines"></mapping>
-        <mapping class="system.entity.Order"></mapping>
+        <mapping class="system.entity.Orders"></mapping>
         <mapping class="system.entity.Points"></mapping>
         <mapping class="system.entity.Transport"></mapping>
         <mapping class="system.entity.User"></mapping>
         <mapping class="system.entity.WayInfo"></mapping>
         <mapping class="system.entity.Way"></mapping>
+        <mapping class="system.entity.Orders"/>
 
     </session-factory>
 </hibernate-configuration>

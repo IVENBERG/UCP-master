@@ -10,5 +10,5 @@ public interface WayDAO {
     void add(Way way);
     List<Way> getWay();
     void update(Way way);
-    void remove(Way way);
+    void remove(int way);
 }

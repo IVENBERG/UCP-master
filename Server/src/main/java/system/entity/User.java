@@ -31,7 +31,7 @@ public class User {
     private String status;
 
     @OneToMany(mappedBy="user")
-    private Collection<Order> orders;
+    private Collection<Orders> orders;
 
 
     public int getIdUser() {
@@ -76,10 +76,10 @@ public class User {
     public void setStatus(String status) {
         this.status = status;
     }
-    public Collection<Order> getOrders() {
+    public Collection<Orders> getOrders() {
         return orders;
     }
-    public void setOrders(Collection<Order> orders) {
+    public void setOrders(Collection<Orders> orders) {
         this.orders = orders;
     }
 

@@ -1,56 +1,60 @@
 package system.dao;
 
+import org.hibernate.Query;
 import org.hibernate.Session;
-import system.entity.Order;
+import system.entity.Orders;
 import system.hibernateConfig.SessionUtil;
 
 import java.util.List;
 
 
 public class OrderDAOImpl extends SessionUtil implements OrderDAO {
+    String newStr = "newOrder";
 
-    public void add(Order order) {
+    public void add(Orders order) {
         openTransactionSession();
         Session session = openSession();
         session.save(order);
         closeTransactionSession();
     }
 
-    public List<Order> getOrder() {
+    public List<Orders> getOrder() {
         openTransactionSession();
         Session session = openSession();
-        List<Order> userOrder = session.createQuery("from Order").list();
+        List<Orders> userOrder = session.createQuery("from Orders").list();
         closeTransactionSession();
         return userOrder;
     }
 
-    public List<Order> getNewOrders() {
+    public List<Orders> getNewOrders() {
         openTransactionSession();
         Session session = openSession();
-        List<Order> userOrder = session.createQuery("from Order where status = 'new'").list();
+        List<Orders> userOrder = session.createQuery("from Orders").list();
         closeTransactionSession();
         return userOrder;
     }
 
-    public Order getOrder(int id) {
+    public Orders getOrder(int id) {
         openTransactionSession();
         Session session = openSession();
-        Order userOrder = (Order) session.createQuery("from Order where id_order").uniqueResult();
+        Orders userOrder = (Orders) session.createQuery("from Orders where id_order = " + id).uniqueResult();
         closeTransactionSession();
         return userOrder;
     }
 
-    public void update(Order order) {
+    public boolean update(int id, String status) {
         openTransactionSession();
         Session session = openSession();
-        session.update(order);
+        Query order = session.createQuery("update Orders set status = '" + status + "' where id_order = " + id);
+        order.executeUpdate();
         closeTransactionSession();
+        return true;
     }
 
-    public void remove(Order order) {
+    public void remove(Orders order) {
         openTransactionSession();
         Session session = openSession();
-        Order currentOrder = (Order) session.load(Order.class, new Integer(order.getIdOrder()));
+        Orders currentOrder = (Orders) session.load(Orders.class, new Integer(order.getIdOrder()));
         if(currentOrder != null){
             session.delete(currentOrder);
         }

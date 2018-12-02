@@ -19,7 +19,7 @@ public class LinesDAOImpl extends SessionUtil implements LinesDAO {
     public List<Lines> getLines() {
         openTransactionSession();
         Session session = openSession();
-        List<Lines> linesList = session.createQuery("from Lines ").list();
+        List<Lines> linesList = session.createQuery("from Lines").list();
         closeTransactionSession();
         return linesList;
     }
@@ -34,7 +34,7 @@ public class LinesDAOImpl extends SessionUtil implements LinesDAO {
     public void remove(Lines lines) {
         openTransactionSession();
         Session session = openSession();
-        Lines currentLines = (Lines) session.load(Lines.class, new Integer(lines.getIdLine()));
+        Lines currentLines = (Lines) session.load(Lines.class, new Integer(lines.getId()));
         if(currentLines != null){
             session.delete(currentLines);
         }

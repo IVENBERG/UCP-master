@@ -2,15 +2,13 @@ package system.entity;
 
 import javax.persistence.*;
 import java.util.Collection;
-import java.util.Objects;
 
 @Entity
-@Table(name="lines")
+@Table(name = "way_lines")
 public class Lines {
     @Id
-    @Column(name = "id_line")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idLine;
+    @Column(name = "id")
+    private int id;
 
     @Column(name = "distance")
     private int distance;
@@ -27,15 +25,14 @@ public class Lines {
     @JoinColumn(name="end_point")
     private Points endPoint;
 
-    @OneToMany(mappedBy="lines")
+    @OneToMany(mappedBy="line")
     private Collection<Way> ways;
 
-
-    public int getIdLine() {
-        return idLine;
+    public int getId() {
+        return id;
     }
-    public void setIdLine(int idLine) {
-        this.idLine = idLine;
+    public void setId(int id) {
+        this.id = id;
     }
     public int getDistance() {
         return distance;
@@ -72,17 +69,19 @@ public class Lines {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Lines lines = (Lines) o;
-        return idLine == lines.idLine &&
-                distance == lines.distance &&
-                Objects.equals(transport, lines.transport) &&
-                Objects.equals(startPoint, lines.startPoint) &&
-                Objects.equals(endPoint, lines.endPoint) &&
-                Objects.equals(ways, lines.ways);
+
+        if (id != lines.id) return false;
+        if (distance != lines.distance) return false;
+
+        return true;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idLine, distance, transport, startPoint, endPoint, ways);
+        int result = id;
+        result = 31 * result + distance;
+        return result;
     }
 }

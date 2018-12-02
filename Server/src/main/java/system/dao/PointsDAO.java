@@ -12,4 +12,5 @@ public interface PointsDAO {
     void update(Points points);
     void remove(Points points);
     Points getPointsID(int id);
+    Points getPointsName(String name);
 }

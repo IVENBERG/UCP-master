@@ -2,7 +2,7 @@ package system.service;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import system.entity.Order;
+import system.entity.Orders;
 import system.entity.Points;
 import system.entity.Way;
 
@@ -10,21 +10,22 @@ import java.util.Iterator;
 import java.util.List;
 
 public class JsonGenerator {
-    /*public JSONObject generateObjectForAllWays(int flag, Way way){
+    public JSONObject generateObjectForAllWays(Way way){
         JSONObject viewPoint = new JSONObject();
-        viewPoint.put("id", flag);
-        viewPoint.put("value", way.getName());
-        viewPoint.put("value", way.);
-        viewPoint.put("value", way.getName());
+        viewPoint.put("pos", way.getPosition());
+        viewPoint.put("firstpoint", way.getLine().getStartPoint().getName());
+        viewPoint.put("secondpoint", way.getLine().getEndPoint().getName());
+        viewPoint.put("distance", way.getLine().getDistance());
+        viewPoint.put("transport", way.getLine().getTransport().getType());
         return viewPoint;
-    }*/
-    public JSONObject generateObjectForAllOrder(int flag, Order order){
+    }
+    public JSONObject generateObjectForAllOrder(Orders order){
         JSONObject viewPoint = new JSONObject();
         viewPoint.put("id", order.getIdOrder());
         viewPoint.put("time", order.getTime());
-        viewPoint.put("idWay", order.getWay());
+        viewPoint.put("idWay", order.getWay().getId());
         viewPoint.put("price", order.getPrice());
-        viewPoint.put("client", order.getUser().getIdUser());
+        viewPoint.put("client", order.getUser().getLogin());
         return viewPoint;
     }
     public String generateSuccessTrueJson() {
@@ -50,28 +51,24 @@ public class JsonGenerator {
 
         return response.toString();
     }
-    /*public String generateAllWays(List<Way> wayList){
+    public String generateAllWays(List<Way> wayList){
         JSONArray employees = new JSONArray();
         JSONObject response = new JSONObject();
 
-        int flag = 1;
-        for (Iterator<Points> it = wayList.iterator(); it.hasNext(); ) {
-            employees.put(generateObjectForAllWays(flag, it.next()));
-            flag++;
+        for (Iterator<Way> it = wayList.iterator(); it.hasNext(); ) {
+            employees.put(generateObjectForAllWays(it.next()));
         }
         response.put("success",true);
         response.put("data",employees);
 
         return response.toString();
-    }*/
-    public String generateAllOrders(List<Order> orderList){
+    }
+    public String generateAllOrders(List<Orders> orderList){
         JSONArray employees = new JSONArray();
         JSONObject response = new JSONObject();
 
-        int flag = 1;
-        for (Iterator<Order> it = orderList.iterator(); it.hasNext(); ) {
-            employees.put(generateObjectForAllOrder(flag, it.next()));
-            flag++;
+        for (Iterator<Orders> it = orderList.iterator(); it.hasNext(); ) {
+            employees.put(generateObjectForAllOrder(it.next()));
         }
         response.put("success",true);
         response.put("data",employees);

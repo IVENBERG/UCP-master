@@ -19,7 +19,7 @@ public class PointsDAOImpl extends SessionUtil implements PointsDAO {
     public List<Points> getPoints() {
         openTransactionSession();
         Session session = openSession();
-        List<Points> userPoints = session.createQuery("from Points ").list();
+        List<Points> userPoints = session.createQuery("from Points").list();
         closeTransactionSession();
         return userPoints;
     }
@@ -29,6 +29,14 @@ public class PointsDAOImpl extends SessionUtil implements PointsDAO {
         openTransactionSession();
         Session session = openSession();
         Points userPoints = (Points) session.createQuery("from Points where id_point = " + id).uniqueResult();
+        closeTransactionSession();
+        return userPoints;
+    }
+
+    public Points getPointsName(String name) {
+        openTransactionSession();
+        Session session = openSession();
+        Points userPoints = (Points) session.createQuery("from Points where name = " + name).uniqueResult();
         closeTransactionSession();
         return userPoints;
     }

@@ -3,7 +3,7 @@ package system.service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpEntity;
-import system.dao.PointsDAOImpl;
+import system.dao.*;
 import system.entity.Points;
 
 import java.io.IOException;

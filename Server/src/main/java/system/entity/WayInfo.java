@@ -23,6 +23,9 @@ public class WayInfo {
     @OneToMany(mappedBy="wayInfo")
     private Collection<Way> ways;
 
+    @OneToMany(mappedBy="way")
+    private Collection<Orders> orders;
+
 
     public int getId() {
         return id;
@@ -47,6 +50,12 @@ public class WayInfo {
     }
     public void setWays(Collection<Way> ways) {
         this.ways = ways;
+    }
+    public Collection<Orders> getOrders() {
+        return orders;
+    }
+    public void setOrders(Collection<Orders> orders) {
+        this.orders = orders;
     }
 
     @Override
