@@ -2,6 +2,7 @@ package system.dao;
 
 import org.hibernate.Session;
 import system.entity.Lines;
+import system.entity.Orders;
 import system.hibernateConfig.SessionUtil;
 
 import java.util.List;

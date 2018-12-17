@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import system.entity.Orders;
 import system.entity.Points;
+import system.entity.User;
 import system.entity.Way;
 
 import java.util.Iterator;
@@ -59,6 +60,56 @@ public class JsonGenerator {
         }
         response.put("success",true);
         response.put("data",employees);
+
+        return response.toString();
+    }
+    public String generateAllUsers(List<User> userList){
+        JSONArray employees = new JSONArray();
+        JSONObject response = new JSONObject();
+        JSONObject object = new JSONObject();
+
+        for (Iterator<User> it = userList.iterator(); it.hasNext(); ) {
+            User user = it.next();
+            String names = user.getSurname() + " " + user.getName();
+            object.put("login", user.getLogin());
+            object.put("fio", names);
+
+            employees.put(object);
+        }
+        response.put("success",true);
+        response.put("data",employees);
+
+        return response.toString();
+    }
+    public String generateStatusBlockManagers(List<User> userList){
+        JSONArray employees = new JSONArray();
+        JSONObject response = new JSONObject();
+        JSONObject object = new JSONObject();
+
+        for (Iterator<User> it = userList.iterator(); it.hasNext(); ) {
+            User user = it.next();
+            String names = user.getSurname() + " " + user.getName();
+            object.put("login", user.getLogin());
+            object.put("fio", names);
+            object.put("role", user.getRole());
+
+            employees.put(object);
+        }
+        response.put("success",true);
+        response.put("data",employees);
+
+        return response.toString();
+    }
+    public String generateUser(User user){
+        JSONObject response = new JSONObject();
+
+        response.put("success",true);
+        response.put("lastName",user.getSurname());
+        response.put("firstName",user.getName());
+        response.put("secondName","");
+        response.put("address",user.getAddress());
+        response.put("phone",user.getPhone());
+        response.put("email",user.getEmail());
 
         return response.toString();
     }
