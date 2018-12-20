@@ -21,10 +21,10 @@ public class Points {
     @OneToMany(mappedBy="endPoint")
     private Collection<Lines> endLines;
 
-    @OneToMany(mappedBy="start")
+    @OneToMany(mappedBy="start_point")
     private Collection<WayInfo> startWayInfo;
 
-    @OneToMany(mappedBy="end")
+    @OneToMany(mappedBy="end_point")
     private Collection<WayInfo> endWayInfo;
 
 
@@ -81,5 +81,17 @@ public class Points {
     @Override
     public int hashCode() {
         return Objects.hash(idPoint, name, startLines, endLines, startWayInfo, endWayInfo);
+    }
+
+    @Override
+    public String toString() {
+        return "Points{" +
+                "idPoint=" + idPoint +
+                ", name='" + name + '\'' +
+                ", startLines=" + startLines +
+                ", endLines=" + endLines +
+                ", startWayInfo=" + startWayInfo +
+                ", endWayInfo=" + endWayInfo +
+                '}';
     }
 }

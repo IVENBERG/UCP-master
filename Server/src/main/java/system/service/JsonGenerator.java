@@ -2,10 +2,8 @@ package system.service;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-import system.entity.Orders;
-import system.entity.Points;
-import system.entity.User;
-import system.entity.Way;
+import system.dao.WayInfoDAOImpl;
+import system.entity.*;
 
 import java.util.Iterator;
 import java.util.List;
@@ -38,6 +36,20 @@ public class JsonGenerator {
         viewPoint.put("idWay", order.getWay().getId());
         viewPoint.put("price", order.getPrice());
         viewPoint.put("client", order.getUser().getLogin());
+        return viewPoint;
+    }
+    public JSONObject generateObjectForAllUserOrders(Orders order){
+        JSONObject viewPoint = new JSONObject();
+        viewPoint.put("number", order.getIdOrder());
+        viewPoint.put("pointA", order.getWay().getStart_point());
+        viewPoint.put("pointB", order.getWay().getEnd_point());
+        viewPoint.put("dist", order.getWay().getDistance());
+        viewPoint.put("cost", order.getPrice());
+        viewPoint.put("value", "0");
+        viewPoint.put("date", order.getTime());
+        viewPoint.put("date_1", order.getTime2());
+        viewPoint.put("manager", "отдел транспорта");
+        viewPoint.put("status", order.getStatus());
         return viewPoint;
     }
     public String generateSuccessTrueJson() {
@@ -143,6 +155,38 @@ public class JsonGenerator {
 
         for (Iterator<Orders> it = orderList.iterator(); it.hasNext(); ) {
             employees.put(generateObjectForAllOrder(it.next()));
+        }
+        response.put("success",true);
+        response.put("data",employees);
+
+        return response.toString();
+    }
+    public String generateUserOrders(List<Orders> orderList){
+        JSONArray employees = new JSONArray();
+        JSONObject response = new JSONObject();
+
+        for (Iterator<Orders> it = orderList.iterator(); it.hasNext(); ) {
+            employees.put(generateObjectForAllOrder(it.next()));
+        }
+        response.put("success",true);
+        response.put("data",employees);
+
+        return response.toString();
+    }
+    public String generateSearch(String point1, String point2, String volume){
+        WayInfoDAOImpl wayInfo = new WayInfoDAOImpl();
+        Price price = new Price();
+        List<WayInfo> wayInfoList = wayInfo.getWayInfo(point1, point2);
+        JSONArray employees = new JSONArray();
+        JSONObject response = new JSONObject();
+        JSONObject object = new JSONObject();
+
+        for (Iterator<WayInfo> it = wayInfoList.iterator(); it.hasNext(); ) {
+            WayInfo way = it.next();
+            object.put("number", way.getId());
+            object.put("cost", price.fullPrice(way));
+            object.put("time", price.fullTime(way));
+            employees.put(object);
         }
         response.put("success",true);
         response.put("data",employees);

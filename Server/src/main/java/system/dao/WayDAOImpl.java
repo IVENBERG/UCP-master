@@ -3,6 +3,7 @@ package system.dao;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import system.entity.Way;
+import system.entity.WayInfo;
 import system.hibernateConfig.SessionUtil;
 
 import java.util.List;
@@ -28,9 +29,16 @@ public class WayDAOImpl extends SessionUtil implements WayDAO {
     public List<Way> getWayID(int id) {
         openTransactionSession();
         Session session = openSession();
-        List<Way> userWay = session.createQuery("from Way where id_way = " + id).list();
-        closeTransactionSession();
-        return userWay;
+        Query query = session.createQuery("from Way where id_way = " +id);
+        if(query.list().isEmpty()){
+            closeTransactionSession();
+            return null;
+        }
+        else{
+            closeTransactionSession();
+            List<Way> wi = query.list();
+            return wi;
+        }
     }
 
     public void update(Way way) {

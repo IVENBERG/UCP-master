@@ -33,11 +33,10 @@ public class ManagerController {
             return jsonGenerator.generateSuccessFalseJson();
         }
     }
-
+    //success
     @RequestMapping(value = "/addway", method = RequestMethod.POST)
     public @ResponseBody String addWay(HttpEntity<String> request) throws IOException, JSONException, SQLException {
         WayLogic wayClass = new WayLogic();
-        wayClass.addWay(request);
         if(wayClass.addWay(request)){
             JSONObject response = new JSONObject();
             response.put("success",true);
@@ -46,10 +45,10 @@ public class ManagerController {
         else{
             JSONObject response = new JSONObject();
             response.put("success",false);
+            response.put("message","Такой маршрут уже существует");
             return response.toString();
         }
     }
-
     //success
     @RequestMapping(value = "/allways", method = RequestMethod.GET, produces = "application/json; charset=utf-8")
     public @ResponseBody String allWays() throws JSONException{

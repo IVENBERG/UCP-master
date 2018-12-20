@@ -36,7 +36,7 @@ public class PointsDAOImpl extends SessionUtil implements PointsDAO {
     public Points getPointsName(String name) {
         openTransactionSession();
         Session session = openSession();
-        Points userPoints = (Points) session.createQuery("from Points where name = " + name).uniqueResult();
+        Points userPoints = (Points) session.createQuery("from Points where name = '" + name + "'").uniqueResult();
         closeTransactionSession();
         return userPoints;
     }

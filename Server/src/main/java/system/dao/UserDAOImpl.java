@@ -117,4 +117,22 @@ public class UserDAOImpl extends SessionUtil implements UserDAO {
         }
         closeTransactionSession();
     }
+
+    public boolean ubpatePass(String pass, String login) {
+        openTransactionSession();
+        Session session = openSession();
+        Query order = session.createQuery("update User set password = '" + pass + "' where login = '" + login + "'");
+        order.executeUpdate();
+        closeTransactionSession();
+        return true;
+    }
+
+    public boolean upateInfo(String address, String phone, String email, String login) {
+        openTransactionSession();
+        Session session = openSession();
+        Query order = session.createQuery("update User set address = '" + address + "', phone = '"+phone+"', email = '"+email+"' where login = '" + login + "'");
+        order.executeUpdate();
+        closeTransactionSession();
+        return true;
+    }
 }
