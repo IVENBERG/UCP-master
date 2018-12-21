@@ -24,6 +24,15 @@ public class User {
     @Column(name = "surname")
     private String surname;
 
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "phone")
+    private String phone;
+
+    @Column(name = "email")
+    private String email;
+
     @Column(name = "role")
     private String role;
 
@@ -82,6 +91,24 @@ public class User {
     public void setOrders(Collection<Orders> orders) {
         this.orders = orders;
     }
+    public String getAddress() {
+        return address;
+    }
+    public void setAddress(String address) {
+        this.address = address;
+    }
+    public String getPhone() {
+        return phone;
+    }
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+    public String getEmail() {
+        return email;
+    }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -93,6 +120,9 @@ public class User {
                 Objects.equals(password, user.password) &&
                 Objects.equals(name, user.name) &&
                 Objects.equals(surname, user.surname) &&
+                Objects.equals(address, user.address) &&
+                Objects.equals(phone, user.phone) &&
+                Objects.equals(email, user.email) &&
                 Objects.equals(role, user.role) &&
                 Objects.equals(status, user.status) &&
                 Objects.equals(orders, user.orders);
@@ -100,6 +130,6 @@ public class User {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idUser, login, password, name, surname, role, status, orders);
+        return Objects.hash(idUser, login, password, name, surname, address, phone, email, role, status, orders);
     }
 }

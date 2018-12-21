@@ -27,7 +27,7 @@ public class TransportDAOImpl extends SessionUtil implements TransportDAO {
     public Transport getTransportName(String name) {
         openTransactionSession();
         Session session = openSession();
-        Transport userTransport = (Transport) session.createQuery("from Transport where type = " + name).uniqueResult();
+        Transport userTransport = (Transport) session.createQuery("from Transport where type = '" + name + "'").uniqueResult();
         closeTransactionSession();
         return userTransport;
     }

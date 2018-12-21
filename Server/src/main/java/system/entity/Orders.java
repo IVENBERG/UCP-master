@@ -1,6 +1,7 @@
 package system.entity;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table(name = "orders")
@@ -13,11 +14,17 @@ public class Orders {
     @Column(name = "price")
     private double price;
 
+    @Column(name = "volume")
+    private int volume;
+
     @Column(name = "status")
     private String status;
 
     @Column(name = "time")
     private String time;
+
+    @Column(name = "time2")
+    private String time2;
 
     @ManyToOne(optional=false)
     @JoinColumn(name="id_user")
@@ -63,32 +70,17 @@ public class Orders {
     public void setWay(WayInfo way) {
         this.way = way;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Orders orders = (Orders) o;
-
-        if (idOrder != orders.idOrder) return false;
-        if (Double.compare(orders.price, price) != 0) return false;
-        if (status != null ? !status.equals(orders.status) : orders.status != null) return false;
-        if (time != null ? !time.equals(orders.time) : orders.time != null) return false;
-
-        return true;
+    public String getTime2() {
+        return time2;
     }
-
-    @Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = idOrder;
-        temp = Double.doubleToLongBits(price);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        result = 31 * result + (status != null ? status.hashCode() : 0);
-        result = 31 * result + (time != null ? time.hashCode() : 0);
-        return result;
+    public void setTime2(String time2) {
+        this.time2 = time2;
+    }
+    public int getVolume() {
+        return volume;
+    }
+    public void setVolume(int volume) {
+        this.volume = volume;
     }
 
     @Override
@@ -96,10 +88,32 @@ public class Orders {
         return "Orders{" +
                 "idOrder=" + idOrder +
                 ", price=" + price +
+                ", volume=" + volume +
                 ", status='" + status + '\'' +
                 ", time='" + time + '\'' +
+                ", time2='" + time2 + '\'' +
                 ", user=" + user +
                 ", way=" + way +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Orders orders = (Orders) o;
+        return idOrder == orders.idOrder &&
+                Double.compare(orders.price, price) == 0 &&
+                volume == orders.volume &&
+                Objects.equals(status, orders.status) &&
+                Objects.equals(time, orders.time) &&
+                Objects.equals(time2, orders.time2) &&
+                Objects.equals(user, orders.user) &&
+                Objects.equals(way, orders.way);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(idOrder, price, volume, status, time, time2, user, way);
     }
 }

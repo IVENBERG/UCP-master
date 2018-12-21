@@ -84,4 +84,15 @@ public class Lines {
         result = 31 * result + distance;
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Lines{" +
+                "id=" + id +
+                ", distance=" + distance +
+                ", transport=" + transport.getIdTransport() +
+                ", startPoint=" + startPoint.getIdPoint() +
+                ", endPoint=" + endPoint.getIdPoint() +
+                '}';
+    }
 }
