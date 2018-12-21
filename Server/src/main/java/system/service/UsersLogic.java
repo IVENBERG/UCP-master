@@ -4,14 +4,16 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
+import org.springframework.web.servlet.ModelAndView;
 import system.dao.OrderDAOImpl;
 import system.dao.UserDAO;
 import system.dao.UserDAOImpl;
-import system.entity.Orders;
-import system.entity.Points;
-import system.entity.User;
+import system.dao.WayInfoDAOImpl;
+import system.entity.*;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class UsersLogic {
@@ -147,7 +149,7 @@ public class UsersLogic {
 
         String point1 = actualObj.get("point1").textValue();
         String point2 = actualObj.get("point2").textValue();
-        String volume = actualObj.get("volume").textValue();
+        double volume = actualObj.get("volume").doubleValue();
 
         return jsonGenerator.generateSearch(point1,point2,volume);
     }
@@ -202,5 +204,132 @@ public class UsersLogic {
         response.put("success",true);
         return response.toString();
     }
+    public String returnStaffAuth(HttpEntity<String> request) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode actualObj = mapper.readTree(request.getBody());
+        UserDAOImpl userDAO = new UserDAOImpl();
+        JSONObject response = new JSONObject();
 
+        String log = actualObj.get("log").textValue();
+        int flag = actualObj.get("flag").intValue();
+        String pas = actualObj.get("pas").textValue();
+
+        User currentUser = userDAO.getUser(log);
+        if(currentUser != null){
+            if(currentUser.getPassword().equals(pas)){
+                if(flag == 0){
+                    response.put("success",true);
+                    response.put("role","user");
+                    return response.toString();
+                }
+                else{
+                    response.put("success",true);
+                    response.put("role",currentUser.getRole());
+                    return response.toString();
+                }
+            }
+            else{
+                response.put("success",false);
+                response.put("message","Ошибка авторизации, неверный пароль");
+                return response.toString();
+            }
+        }
+        else{
+            response.put("success",false);
+            response.put("message","Ошибка авторизации, сотрудник не найден");
+            return response.toString();
+        }
+    }
+    public String returnUserAuth(HttpEntity<String> request) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode actualObj = mapper.readTree(request.getBody());
+        UserDAOImpl userDAO = new UserDAOImpl();
+        JSONObject response = new JSONObject();
+
+        String login = actualObj.get("login").textValue();
+        String pas = actualObj.get("pas").textValue();
+
+        User currentUser = userDAO.getUser(login);
+
+        if(currentUser.getPassword().equals(pas)){
+            response.put("success",true);
+            return response.toString();
+        }
+        else{
+            response.put("success",false);
+            response.put("message","Неверный логин или пароль");
+            return response.toString();
+        }
+    }
+    public String returnNewOrder(String login, int way_id, int volume) throws IOException {
+        JSONObject object = new JSONObject();
+        UserDAOImpl userDAO = new UserDAOImpl();
+        WayInfoDAOImpl wayInfoDAO = new WayInfoDAOImpl();
+        OrderDAOImpl orderDAO = new OrderDAOImpl();
+        Orders order = new Orders();
+
+        SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date now = new Date();
+        String strDate = sdfDate.format(now);
+
+        User user = userDAO.getUser(login);
+        WayInfo wayInfo = wayInfoDAO.getWay(way_id);
+        double price = 0;
+
+        for(Way w : wayInfo.getWays()){
+            price = price + (w.getLine().getTransport().getKoeff()*w.getLine().getDistance()*volume);
+        }
+
+        order.setStatus("new");
+        order.setVolume(volume);
+        order.setUser(user);
+        order.setWay(wayInfo);
+        order.setPrice(price);
+        order.setTime(strDate);
+
+        orderDAO.add(order);
+
+
+        object.put("success", true);
+
+        return object.toString();
+    }
+    public String returnUserReg(HttpEntity<String> request) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode actualObj = mapper.readTree(request.getBody());
+        UserDAOImpl userDAO = new UserDAOImpl();
+        JSONObject response = new JSONObject();
+
+        String secondName = actualObj.get("secondName").textValue();
+        String firstName = actualObj.get("firstName").textValue();
+        String email = actualObj.get("email").textValue();
+        String phone = actualObj.get("phone").textValue();
+        String address = actualObj.get("address").textValue();
+        String log = actualObj.get("log").textValue();
+        String pasword = actualObj.get("pasword").textValue();
+
+        User currentUser = userDAO.getUser(log);
+        if(currentUser == null){
+            User user = new User();
+            user.setEmail(email);
+            user.setPhone(phone);
+            user.setAddress(address);
+            user.setPassword(pasword);
+            user.setLogin(log);
+            user.setName(firstName);
+            user.setRole("user");
+            user.setStatus("active");
+            user.setSurname(secondName);
+            userDAO.add(user);
+
+            response.put("success",true);
+            return response.toString();
+        }
+        else{
+            response.put("success",false);
+            response.put("message","Такой логин уже существует");
+            return response.toString();
+        }
+
+    }
 }

@@ -14,7 +14,6 @@ public class Price {
         }
         return fullPrice;
     }
-
     private double time(double l, float v){
         return l/v;
     }
@@ -23,6 +22,16 @@ public class Price {
         for(Way way : wayInfo.getWays()){
             fullTime += price(way.getLine().getDistance(), way.getLine().getTransport().getSpeed());
         }
+        return fullTime;
+    }
+    public double wayPrice(Way way){
+        double fullPrice = 0;
+        fullPrice += price(way.getLine().getTransport().getKoeff(), way.getLine().getDistance());
+        return fullPrice;
+    }
+    public double wayTime(Way way){
+        double fullTime = 0;
+        fullTime += price(way.getLine().getDistance(), way.getLine().getTransport().getSpeed());
         return fullTime;
     }
 }

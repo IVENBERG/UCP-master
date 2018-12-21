@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 import system.service.UsersLogic;
 
 import java.io.IOException;
@@ -103,11 +104,38 @@ public class UserController {
         UsersLogic usersLogic = new UsersLogic();
         return usersLogic.returnChangePass(login, request);
     }
-
+    //success
     @RequestMapping(value = "/edit/{login}", method = RequestMethod.POST)
     public @ResponseBody String changeInfo(HttpEntity<String> request, @PathVariable String login) throws JSONException, IOException {
         UsersLogic usersLogic = new UsersLogic();
         return usersLogic.returnChange(login, request);
     }
 
+    @RequestMapping(value = "/newOrder/{login}/{way_id}/{volume}", method = RequestMethod.GET)
+    public @ResponseBody String newOrder(@PathVariable String login,@PathVariable int way_id,@PathVariable int volume) throws JSONException, IOException {
+        UsersLogic usersLogic = new UsersLogic();
+        return usersLogic.returnNewOrder(login,way_id,volume);
+    }
+
+
+
+
+    @RequestMapping(value = "/staffAuth", method = RequestMethod.POST)
+    public @ResponseBody String staffAuth(HttpEntity<String> request) throws JSONException, IOException {
+        UsersLogic usersLogic = new UsersLogic();
+        return usersLogic.returnStaffAuth(request);
+    }
+
+    @RequestMapping(value = "/userAuth", method = RequestMethod.POST)
+    public @ResponseBody String userAuth(HttpEntity<String> request) throws JSONException, IOException {
+        UsersLogic usersLogic = new UsersLogic();
+        String info = usersLogic.returnUserAuth(request);
+        return info;
+    }
+
+    @RequestMapping(value = "/userReg", method = RequestMethod.POST)
+    public @ResponseBody String userReg(HttpEntity<String> request) throws JSONException, IOException {
+        UsersLogic usersLogic = new UsersLogic();
+        return usersLogic.returnUserReg(request);
+    }
 }

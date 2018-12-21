@@ -22,6 +22,7 @@ public class WayLogic {
         WayInfo wayInfo = new WayInfo();
         Lines lines = new Lines();
         List<Way> wayList = new ArrayList<Way>();
+        double sum = 0;
 
         PointsDAOImpl pointsDAO = new PointsDAOImpl();
         LinesDAOImpl linesDAO = new LinesDAOImpl();
@@ -45,6 +46,7 @@ public class WayLogic {
                 line.setStartPoint(startPoint);
                 line.setEndPoint(endPoint);
                 int distance = jsonObj.getInt("distance");
+                sum = sum + distance;
                 line.setDistance(distance);
                 line.setTransport(transportDAO.getTransportName(jsonObj.getString("transport")));
                 linesDAO.add(line);
@@ -59,6 +61,7 @@ public class WayLogic {
         if(id == null){
             wayInfo.setStart_point(myVector.firstElement().getStartPoint());
             wayInfo.setEnd_point(myVector.lastElement().getEndPoint());
+            wayInfo.setDistance(sum);
             wayInfoDAO.add(wayInfo);
             id = wayInfoDAO.getID(myVector.firstElement().getStartPoint(), myVector.lastElement().getEndPoint());
             flag++;

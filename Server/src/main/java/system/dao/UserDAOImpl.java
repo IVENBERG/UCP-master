@@ -3,6 +3,7 @@ package system.dao;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import system.entity.User;
+import system.entity.WayInfo;
 import system.hibernateConfig.SessionUtil;
 
 import java.util.List;
@@ -76,9 +77,16 @@ public class UserDAOImpl extends SessionUtil implements UserDAO {
     public User getUser(String login) {
         openTransactionSession();
         Session session = openSession();
-        User userPoints = (User) session.createQuery("from User where login = '" + login + "'").uniqueResult();
-        closeTransactionSession();
-        return userPoints;
+        Query query = session.createQuery("from User where login = '" + login + "'");
+        if(query.list().isEmpty()){
+            closeTransactionSession();
+            return null;
+        }
+        else{
+            closeTransactionSession();
+            User wi = (User) query.uniqueResult();
+            return wi;
+        }
     }
 
     public boolean blockManager(String login) {

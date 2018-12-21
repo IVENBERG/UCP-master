@@ -28,6 +28,22 @@ public class WayInfoDAOImpl extends SessionUtil implements WayInfoDAO {
         return userWayInfo;
     }
 
+    public WayInfo getWay(int id) {
+        openTransactionSession();
+        Session session = openSession();
+        Query query = session.createQuery("from WayInfo where id = " + id);
+        if(query.list().isEmpty()){
+            closeTransactionSession();
+            return null;
+        }
+        else{
+            closeTransactionSession();
+            WayInfo wi = (WayInfo) query.uniqueResult();
+            return wi;
+        }
+
+    }
+
     public WayInfo getID(Points start, Points end) {
         openTransactionSession();
         Session session = openSession();
@@ -45,10 +61,10 @@ public class WayInfoDAOImpl extends SessionUtil implements WayInfoDAO {
     }
 
     @Override
-    public List<WayInfo> getWayInfo(String point1, String point2) {
+    public List<WayInfo> getWayInfo(int point1, int point2) {
         openTransactionSession();
         Session session = openSession();
-        List<WayInfo> userWayInfo = session.createQuery("from WayInfo where start = '"+point1+"' and end = '"+point2+"'").list();
+        List<WayInfo> userWayInfo = session.createQuery("from WayInfo where start_point = '"+point1+"' and end_point = '"+point2+"'").list();
         closeTransactionSession();
         return userWayInfo;
     }

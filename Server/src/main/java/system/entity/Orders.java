@@ -14,6 +14,9 @@ public class Orders {
     @Column(name = "price")
     private double price;
 
+    @Column(name = "volume")
+    private int volume;
+
     @Column(name = "status")
     private String status;
 
@@ -73,6 +76,26 @@ public class Orders {
     public void setTime2(String time2) {
         this.time2 = time2;
     }
+    public int getVolume() {
+        return volume;
+    }
+    public void setVolume(int volume) {
+        this.volume = volume;
+    }
+
+    @Override
+    public String toString() {
+        return "Orders{" +
+                "idOrder=" + idOrder +
+                ", price=" + price +
+                ", volume=" + volume +
+                ", status='" + status + '\'' +
+                ", time='" + time + '\'' +
+                ", time2='" + time2 + '\'' +
+                ", user=" + user +
+                ", way=" + way +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -81,6 +104,7 @@ public class Orders {
         Orders orders = (Orders) o;
         return idOrder == orders.idOrder &&
                 Double.compare(orders.price, price) == 0 &&
+                volume == orders.volume &&
                 Objects.equals(status, orders.status) &&
                 Objects.equals(time, orders.time) &&
                 Objects.equals(time2, orders.time2) &&
@@ -90,19 +114,6 @@ public class Orders {
 
     @Override
     public int hashCode() {
-        return Objects.hash(idOrder, price, status, time, time2, user, way);
-    }
-
-    @Override
-    public String toString() {
-        return "Orders{" +
-                "idOrder=" + idOrder +
-                ", price=" + price +
-                ", status='" + status + '\'' +
-                ", time='" + time + '\'' +
-                ", time2='" + time2 + '\'' +
-                ", user=" + user +
-                ", way=" + way +
-                '}';
+        return Objects.hash(idOrder, price, volume, status, time, time2, user, way);
     }
 }

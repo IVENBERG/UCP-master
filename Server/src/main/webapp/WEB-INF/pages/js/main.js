@@ -1,21 +1,23 @@
+var list=["Минск"];
 var menu_data_multi  = [
     {id: "orders", icon: "wxi-check",value:"Заказы"},
     {id: "way", icon: "fas fa-globe", value:"Маршруты"},
     {id: "new_way", icon: "fas fa-location-arrow",value:"Создать маршрут"},
     {id:"new_point", icon:"fas fa-map-marked-alt", value:"Добавить точку"},
+    {id:"user_manage", icon:"fas fa-users", value:"Управление пользователями"},
 ];
 webix.protoUI({ name:'activeTable'}, webix.ui.datatable, webix.ActiveContent );
 function addToWay() {
     $$("form").markInvalid("point2", "");
     $$("form").markInvalid("distance", "");
     if ($$("form").validate()) {
-     var idItem=$$("way_table").add($$('form').getValues());
-     var position=$$("way_table").getIndexById(idItem)+1;
-     $$("way_table").updateItem(idItem,{pos:position});
-     $$('point1').setValue($$('form').getValues().point2);
-     $$("point1").define("readonly", true);
-     $$('point2').setValue("");
-     $$('distance').setValue("");
+        var idItem=$$("way_table").add($$('form').getValues());
+        var position=$$("way_table").getIndexById(idItem)+1;
+        $$("way_table").updateItem(idItem,{pos:position});
+        $$('point1').setValue($$('form').getValues().point2);
+        $$("point1").define("readonly", true);
+        $$('point2').setValue("");
+        $$('distance').setValue("");
     }
 };
 
@@ -23,7 +25,7 @@ function delLine(){
     var row=(this.data.$masterId.row);
     var curId="";
     if(row==$$("way_table").getLastId())
-    $$("way_table").remove(row);
+        $$("way_table").remove(row);
     else {
         while (row!=curId) {
             $$("way_table").remove($$("way_table").getLastId());
@@ -62,39 +64,30 @@ var add= {id:"new_way",type: "space", rows:[
 
             elements: [
                 {
-                    options: [
-                        "Минск",
-                        "Москва",
-                        "Брест",
-                        "Витебск",
-                        "Воронеж",
-                        "Амстердам",
-                        "Прага",
-                        "Вашингтон",
-                        "Владимир"
-                    ],
-                    view: "richselect",
+                    view: "combo",
                     required:true,
                     align: "center",
                     label: "Точка А :",
                     id: "point1",
                     name: "point1",
                     width: 500,
-                    value: "Минск"
+                    value: "Минск",
+                    options: list,
+                    on:{
+                        'onItemClick':function () {
+                            webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/allPoints", function(text,data){
+                                var options = data.json().data;
+                                var list = $$("point1").getPopup().getList();
+                                list.clearAll();
+                                list.parse(options);
+                            });
+
+                        }
+                    }
+
                 },
                 {
-                    options: [
-                        "Минск",
-                        "Москва",
-                        "Брест",
-                        "Витебск",
-                        "Воронеж",
-                        "Амстердам",
-                        "Прага",
-                        "Вашингтон",
-                        "Владимир"
-                    ],
-                    view: "richselect",
+                    view: "combo",
                     align: "center",
                     label: "Точка B :",
                     required:true,
@@ -102,7 +95,19 @@ var add= {id:"new_way",type: "space", rows:[
                     name: "point2",
                     bottomPadding: 18,
                     width: 500,
-                    value: "Минск"
+                    value: "Минск",
+                    options: list,
+                    on:{
+                        'onItemClick':function () {
+                            webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/allPoints", function(text,data){
+                                var options = data.json().data;
+                                var list = $$("point2").getPopup().getList();
+                                list.clearAll();
+                                list.parse(options);
+                            });
+
+                        }
+                    }
                 },
                 {
                     view: "text",
@@ -201,11 +206,16 @@ var add= {id:"new_way",type: "space", rows:[
 
 
 function addPoint() {
-   if( $$("point_form").validate()){
-       var formData=$$("point_form").getValues();
-       var pointdata = JSON.stringify(formData, "", "\t");
-       webix.ajax().headers({'Content-Type':'application/json;charset=utf-8','Accept':'application/json;charset=utf-8'}).post("http://localhost:8080/addpoin", pointdata);
-   };
+    if( $$("point_form").validate()){
+        var formData=$$("point_form").getValues();
+        var pointdata = JSON.stringify(formData, "", "\t");
+        webix.ajax().headers({'Content-Type':'application/json;charset=utf-8','Accept':'application/json;charset=utf-8'}).post("http://localhost:8080/addpoin", pointdata).then(function (result) {
+            if (result.json().success == true) {
+                webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
+            } else {
+                webix.message({type: 'error', text: result.json().message});
+            };});
+    };
 }
 function trash() {
     if( $$("point_form").clear());
@@ -220,107 +230,120 @@ var point= {
             height:350,
             align:"center",
             css: "logo",
-            },
+        },
         {
             cols:[
                 {},
                 {
-        view:"form",
-        css:"border_form",
-        id:"point_form",
-        margin:20,
-        width:600,
-        elements:[
-        {
-            view: "text",
-            width: 400,
-            id:"country",
-            name:"country",
-            align:"center",
-            attributes: {maxlength: 50},
-            required:true,
-            label:"Страна:",
-            bottomPadding: 18,
-        },
-        {
-            view: "text",
-            width: 400,
-            id:"region",
-            name:"region",
-            attributes: {maxlength: 50},
-            align:"center",
-            label:"Область:",
-            bottomPadding: 18,
-        },
-        {
-            view: "text",
-            width: 400,
-            id:"city",
-            name:"city",
-            align:"center",
-            attributes: {maxlength: 50},
-            required:true,
-            label:"Город:",
-            bottomPadding: 18,
-        },
+                    view:"form",
+                    css:"border_form",
+                    id:"point_form",
+                    margin:20,
+                    width:600,
+                    elements:[
+                        {
+                            view: "text",
+                            width: 400,
+                            id:"country",
+                            name:"country",
+                            align:"center",
+                            attributes: {maxlength: 50},
+                            required:true,
+                            label:"Страна:",
+                            bottomPadding: 18,
+                        },
+                        {
+                            view: "text",
+                            width: 400,
+                            id:"region",
+                            name:"region",
+                            attributes: {maxlength: 50},
+                            align:"center",
+                            label:"Область:",
+                            bottomPadding: 18,
+                        },
+                        {
+                            view: "text",
+                            width: 400,
+                            id:"city",
+                            name:"city",
+                            align:"center",
+                            attributes: {maxlength: 50},
+                            required:true,
+                            label:"Город:",
+                            bottomPadding: 18,
+                        },
 
-        {
-            cols:[{},
-                {
-                label: "Очистить",
-                view: "button",
-                type: "iconButton",
-                icon:"wxi-trash",
-                width:200,
-                click:trash,
+                        {
+                            cols:[{},
+                                {
+                                    label: "Очистить",
+                                    view: "button",
+                                    type: "iconButton",
+                                    icon:"wxi-trash",
+                                    width:200,
+                                    click:trash,
+                                },
+                                {width:20},
+                                {
+                                    label: "Сохранить",
+                                    view: "button",
+                                    type: "iconButton",
+                                    icon:"far fa-save",
+                                    width:200,
+                                    click:addPoint,
+                                },{},
+                            ]
+                        },
+                    ],
+
+                    rules: {
+
+                        country: function (value) {
+                            if (!(/^[.а-яА-ЯёЁ\s]{0,}$/i.test(value))) {
+                                $$("point_form").markInvalid("country", "Только буквы русского алфавита");
+                                return false;
+                            }
+                            $$("point_form").markInvalid("country", "");
+                            return true;
+                        },
+                        city: function (value) {
+                            if (!(/^[.а-яА-ЯёЁ\s]{0,}$/i.test(value))) {
+                                $$("point_form").markInvalid("city", "Только буквы русского алфавита");
+                                return false;
+                            }
+                            $$("point_form").markInvalid("city", "");
+                            return true;
+                        },
+                        region: function (value) {
+                            if (!(/^[.а-яА-ЯёЁ\s]{0,}$/i.test(value))) {
+                                $$("point_form").markInvalid("region", "Только буквы русского алфавита");
+                                return false;
+                            }
+                            $$("point_form").markInvalid("region", "");
+                            return true;
+                        }
+                    }
+
                 },
-                {width:20},
-                {
-                    label: "Сохранить",
-                    view: "button",
-                    type: "iconButton",
-                    icon:"far fa-save",
-                    width:200,
-                    click:addPoint,
-                },{},
-            ]
-        },
-    ],
-
-   rules: {
-
-       country: function (value) {
-            if (!(/^[.а-яА-ЯёЁ\s]{0,}$/i.test(value))) {
-                $$("point_form").markInvalid("country", "Только буквы русского алфавита");
-                return false;
-            }
-           $$("point_form").markInvalid("country", "");
-           return true;
-      },
-       city: function (value) {
-           if (!(/^[.а-яА-ЯёЁ\s]{0,}$/i.test(value))) {
-               $$("point_form").markInvalid("city", "Только буквы русского алфавита");
-               return false;
-           }
-           $$("point_form").markInvalid("city", "");
-            return true;
-       },
-       region: function (value) {
-           if (!(/^[.а-яА-ЯёЁ\s]{0,}$/i.test(value))) {
-               $$("point_form").markInvalid("region", "Только буквы русского алфавита");
-               return false;
-           }
-           $$("point_form").markInvalid("region", "");
-           return true;
-       }
-   }
-
-   },
                 {},
             ]},
         {},
     ]
 };
+function deleteWay() {
+    row=this.data.$masterId.row;
+    var idWay=$$("way_inf").getItem(row).id;
+    webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).delete("http://localhost:8080/way/"+idWay).then(function (result) {
+        if (result.json().success == true) {
+            webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
+            $$("way_inf").remove($$("way_inf").getSelectedId());
+            //если нужно очистить нижнюю таблицу
+        } else {
+            webix.message({type: 'error', text: result.json().message});
+        };})
+
+}
 var ways={
     id: "way",
     type:"space",
@@ -353,18 +376,46 @@ var ways={
                     height:"32",
                     type:'icon',
                     icon:'wxi-trash',
+                    click:deleteWay,
                 },
             },
-            // data: [
-            //     { number:1, pointA:"Минск", pointB:"Владивосток", dist:14390,cost:12300,time:"3-5 дней"},
-            //     { number:2, pointA:"Москва", pointB:"Берлин", dist:1800,cost:8300,time:"1 день"},
-            //
-            // ]
+            on: {
+                onItemClick: function () {
+                    var me = this,
+                        obj = me.getSelectedItem(),
+                        id = obj.id;
+                    webix.ajax().headers({"Accept": "application/json"}).get("http://localhost:8080/way/"+id).then(function (result) {
+                        if (result.json().success == true) {
+                            $$("way_info").clearAll();
+                            const lines = result.json().data;
+                            $$("way_info").parse({
+                                pos: $$("way_info").count(),
+                                data: lines,
+                            });
+                            webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
+                        } else {
+                            webix.message({type: 'error', text: result.json().message});
+                        }
+                        ;
+                    }).fail(function (xhr) {
+                        var response = JSON.parse(xhr.response);
+                        webix.message({type: 'error', text: response.message});
+                        $$("main").hideProgress();
+                    });
+
+                }
+            },
+            data: [
+                { id:1, pointA:"Минск", pointB:"Владивосток", dist:14390,cost:12300,time:"3-5 дней"},
+                { id:2, pointA:"Москва", pointB:"Берлин", dist:1800,cost:8300,time:"1 день"},
+
+            ]
         },
 
         {
             view: "datatable",
             id:"way_info",
+            name:"way_info",
             scrollX: false,
             columns:[
                 { id:"pos",    header:"Позиция" ,width:100},
@@ -382,6 +433,62 @@ var ways={
     ]
 
 };
+function confirmOrder() {
+    row=this.data.$masterId.row;
+    var idOrder=$$("order_inf").getItem(row).Id;
+    webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/order/"+idOrder+"/confirm").then(function (result) {
+        if (result.json().success == true) {
+            webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
+            $$("order_inf").remove(row);
+        } else {
+            webix.message({type: 'error', text: result.json().message});
+        };
+
+    })
+}
+function failOrder() {
+    row=this.data.$masterId.row;
+    var idOrder=$$("order_inf").getItem(row).Id;
+    webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/order/"+idOrder+"/fail").then(function (result) {
+        if (result.json().success == true) {
+            webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
+            $$("order_inf").remove(row);
+        } else {
+            webix.message({type: 'error', text: result.json().message});
+        };})
+
+}
+function blolckUser() {
+    row=this.data.$masterId.row;
+    var login=$$("active_user").getItem(row).login;
+    webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/blockUser/"+login).then(function (result) {
+        if (result.json().success == true) {
+            $$("active_user").clearAll(true);
+            $$("block_user").clearAll(true);
+            $$("active_user").loadNext(-1,0);
+            $$("block_user").loadNext(-1,0);
+            webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
+
+        } else {
+            webix.message({type: 'error', text: result.json().message});
+        };})
+
+}
+function unblockUser() {
+    row=this.data.$masterId.row;
+    var login=$$("block_user").getItem(row).login;
+    webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/unblockUser/"+login).then(function (result) {
+        if (result.json().success == true) {
+            $$("active_user").clearAll(true);
+            $$("block_user").clearAll(true);
+            $$("active_user").loadNext(-1,0);
+            $$("block_user").loadNext(-1,0);
+            webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
+
+        } else {
+            webix.message({type: 'error', text: result.json().message});
+        };})
+}
 var orders ={
     id:"orders",
     type:"space",
@@ -392,12 +499,17 @@ var orders ={
             id:"order_inf",
             scrollX: false,
             tooltip:true,
+            url:function(){
+                return webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/orders").then(function(data){
+                    return data.json();
+                });
+            },
             columns:[
-                { id:"number",header:"№" ,width:70,tooltip:false,},
-                { id:"date",   header:"Время",width:200,tooltip:false, },
-                { id:"way",   header:"ID маршрута",width:120 ,tooltip:false,},
-                { id:"cost",   header:"Стоимость",width:155 ,tooltip:false,},
-                { id:"customer",   header:"Клиент",width:155 ,tooltip:false,},
+                { id:"Id",header:"№" ,width:70,tooltip:false,},
+                { id:"Time",   header:"Время",width:200,tooltip:false, },
+                { id:"idWay",   header:"ID маршрута",width:120 ,tooltip:false,},
+                { id:"Price",   header:"Стоимость",width:155 ,tooltip:false,},
+                { id:"Client",   header:"Клиент",width:155 ,tooltip:false,},
                 { id: "ok", header: "&nbsp;", template: "{common.yourButton()}",  width:50,tooltip: "Подтвердить"},
                 { id: "del", header: "&nbsp;", template: "{common.del()}",  width:50,tooltip: "Отказ"},
 
@@ -410,6 +522,7 @@ var orders ={
                     height:"32",
                     type:'icon',
                     icon:'fas fa-check-double',
+                    click:confirmOrder,
                 },
                 del:{
                     view: "button",
@@ -418,20 +531,121 @@ var orders ={
                     height:"32",
                     type:'icon',
                     icon:'fas fa-times',
+                    click:failOrder,
 
                 }
             },
             data: [
-                { number:1, date:"25-10-2018 10:42:35 AM", way:10, cost:14600, customer:"ООО Продторг"},
-                { number:2, date:"25-10-2018 10:42:35 AM", way:3, cost:200, customer:"ООО Продторг"},
-                { number:3, date:"25-10-2018 10:42:35 AM", way:125, cost:300, customer:"ООО Продторг"},
-                { number:4, date:"25-10-2018 10:42:35 AM", way:50, cost:7700, customer:"ООО Продторг"},
-                { number:5, date:"25-10-2018 10:42:35 AM", way:8, cost:8500, customer:"ООО Продторг"},
-                { number:6, date:"25-10-2018 10:42:35 AM", way:2, cost:1200, customer:"ООО Продторг"},
-                { number:7, date:"25-10-2018 10:42:35 AM", way:8, cost:700, customer:"ООО Продторг"},
+                { Id:1, Time:"25-10-2018 10:42:35 AM", idWay:10, Price:14600, Client:"ООО Продторг"},
+                { Id:2, Time:"25-10-2018 10:42:35 AM", idWay:10, Price:14600, Client:"ООО Продторг"},
+                { Id:3, Time:"25-10-2018 10:42:35 AM", idWay:10, Price:14600, Client:"ООО Продторг"},
+
             ]
         },],
 
+}
+var us={
+    id:"user_manage",
+    type:'space',
+    cols:[{},{
+    rows:[
+        {
+            view: "toolbar",
+            css:"header_user",
+            height:30,
+            cols: [
+                {view: "label", label: "Пользователи", align: "left", css: "header_font"},
+                {},
+
+            ]
+        },
+        {
+            view: "activeTable",
+            width:460,
+            height:400,
+            id:"active_user",
+            scrollX: false,
+            url:function(){
+                return webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/activeUsers").then(function(data){
+                    return data.json();
+                });
+            },
+            columns:[
+                { id:"login",    header:"Логин" ,width:100},
+                { id:"fio",   header:"ФИО" ,width:300 },
+                { id: "block", header: "&nbsp;", template: "{common.yourButton()}",  width:40,},
+            ],
+            activeContent: {
+                yourButton: {
+                    view: "button",
+                    id:"blockButton",
+                    width:"30",
+                    height:"32",
+                    type:'icon',
+                    icon:'fas fa-lock',
+                    tooltip:"Заблокировать",
+                    click:blolckUser,
+                },
+            },
+            data: [
+                 { login:"user123", fio:"Иванов Иван Иванович"},
+                 { login:"user777", fio:"Петров Петр Петрович"},
+                 { login:"vovka", fio:"Сидоров Владимир Сергеевич "},
+
+            ]
+        },
+        {height:20},
+        {
+            view: "toolbar",
+            css:"header_blockuser",
+            height:30,
+            cols: [
+                {view: "label", label: "Заблокированные", align: "left", css: "header_font"},
+                {},
+
+            ]
+        },
+        {
+            view: "activeTable",
+            width:460,
+            height:200,
+            id:"block_user",
+            scrollX: false,
+            url:function() {
+                return webix.ajax().headers({'Accept': 'application/json;charset=utf-8'}).get("http://localhost:8080/blockUsers").then(function (data) {
+                    return data.json();
+                });
+            },
+            dataFeed:function() {
+                return webix.ajax().headers({'Accept': 'application/json;charset=utf-8'}).get("http://localhost:8080/blockUsers").then(function (data) {
+                    return data.json();
+                });
+            },
+            columns:[
+                { id:"login",    header:"Логин" ,width:100},
+                { id:"fio",   header:"ФИО" ,width:300 },
+                { id: "unblock", header: "&nbsp;", template: "{common.yourButton()}",  width:40,},
+            ],
+            activeContent: {
+                yourButton: {
+                    view: "button",
+                    id:"unblockButton",
+                    width:"30",
+                    height:"32",
+                    type:'icon',
+                    icon:'fas fa-lock-open',
+                    tooltip:"Разблокировать",
+                    click:unblockUser,
+                },
+            },
+            data: [
+                { login:"user3445", fio:"Иванов Иван Иванович"},
+                { login:"valk20", fio:"Петров Петр Петрович"},
+                { login:"qwe123", fio:"Сидоров Владимир Сергеевич "},
+
+            ]
+        },
+    ]},{}]
 }
 webix.ready(function(){
     webix.ui({
@@ -465,6 +679,7 @@ webix.ready(function(){
                             point,
                             ways,
                             orders,
+                            us,
                         ]
                     },
                 ]},

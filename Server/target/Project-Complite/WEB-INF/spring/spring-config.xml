@@ -7,6 +7,13 @@
     <mvc:annotation-driven/>
 
     <context:component-scan base-package="system"/>
+    
+    <mvc:view-controller path="/logInStaff" view-name="logInStaff"/>
+    <mvc:view-controller path="/userExit" view-name="logInUser"/>
+    <mvc:view-controller path="/seniorManager" view-name="seniorManager"/>
+    <mvc:view-controller path="/user" view-name="user"/>
+    <mvc:view-controller path="/admin" view-name="admin"/>
+
 
     <mvc:resources mapping="/css/**" location="WEB-INF/pages/css/"/>
     <mvc:resources mapping="/img/**" location="WEB-INF/pages/img/"/>
