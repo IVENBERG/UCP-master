@@ -8,6 +8,7 @@ function log(){
         webix.ajax().headers({'Content-Type':'application/json;charset=utf-8','Accept':'application/json;charset=utf-8'}).post("http://localhost:8080/userAuth", log).then(function (result) {
             if (result.json().success == true) {
                 webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
+                webix.send("http://localhost:8080/userAuthStandart",{}, "GET");
             } else {
                 webix.message({type: 'error', text: result.json().message});
             };});
@@ -23,6 +24,7 @@ function reg(){
         webix.ajax().headers({'Content-Type':'application/json;charset=utf-8','Accept':'application/json;charset=utf-8'}).post("http://localhost:8080/userReg", reg).then(function (result) {
             if (result.json().success == true) {
                 webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
+                webix.send("http://localhost:8080/userAuthStandart",{}, "GET");
             } else {
                 webix.message({type: 'error', text: result.json().message});
             };});

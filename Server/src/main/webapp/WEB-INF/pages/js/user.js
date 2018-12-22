@@ -27,8 +27,9 @@ function searchWays() {
 function newOrder() {
     row=this.data.$masterId.row;
     var way_id=$$("way_inf").getItem(row).number;
-    var user="gena";  // взять из session storage!!!!
-    webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/newOrder/"+user+"/"+way_id).then(function (result) {
+    var user=webix.storage.session.get("login");// взять из session storage!!!!
+    var volume=$$("volume").getValue();
+    webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/newOrder/"+user+"/"+way_id+"/"+volume).then(function (result) {
         if (result.json().success == true) {
             webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
             $$("order_inf").clearAll(true);
@@ -59,20 +60,20 @@ var search={
                                 name: "point1",
                                 width: 500,
                                 labelWidth: 160,
-                                //value: "Минск",
-                                //options: list,
-                                options:["One", "Two", "Three"],
-                                // on: {
-                                //     'onItemClick': function () {
-                                //         webix.ajax().headers({'Accept': 'application/json;charset=utf-8'}).get("http://localhost:8080/allPoints", function (text, data) {
-                                //             var options = data.json().data;
-                                //             var list = $$("point1").getPopup().getList();
-                                //             list.clearAll();
-                                //             list.parse(options);
-                                //         });
-                                //
-                                //     }
-                                // }
+                                value: "Минск",
+                                options: list,
+                                       //options:["One", "Two", "Three"],
+                                on: {
+                                    'onItemClick': function () {
+                                        webix.ajax().headers({'Accept': 'application/json;charset=utf-8'}).get("http://localhost:8080/allPoints", function (text, data) {
+                                            var options = data.json().data;
+                                            var list = $$("point1").getPopup().getList();
+                                            list.clearAll();
+                                            list.parse(options);
+                                        });
+
+                                    }
+                                }
 
                             },
                             {
@@ -85,20 +86,20 @@ var search={
                                 bottomPadding: 18,
                                 labelWidth:160,
                                 width: 500,
-                               // value: "Минск",
-                               // options: list,
-                                options:["One", "Two", "Three"],
-                                // on:{
-                                //     'onItemClick':function () {
-                                //         webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/allPoints", function(text,data){
-                                //             var options = data.json().data;
-                                //             var list = $$("point2").getPopup().getList();
-                                //             list.clearAll();
-                                //             list.parse(options);
-                                //         });
-                                //
-                                //     }
-                                // }
+                               value: "Минск",
+                               options: list,
+                                       //options:["One", "Two", "Three"],
+                                on:{
+                                    'onItemClick':function () {
+                                        webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/allPoints", function(text,data){
+                                            var options = data.json().data;
+                                            var list = $$("point2").getPopup().getList();
+                                            list.clearAll();
+                                            list.parse(options);
+                                        });
+
+                                    }
+                                }
                             },
                             {
                                 view: "text",
@@ -171,11 +172,11 @@ var search={
                         click:newOrder,
                     },
                 },
-                data: [
-                    { number:1, pointA:"Минск", pointB:"Владивосток", dist:14390,cost:12300,time:"3-5 дней"},
-                    { number:2, pointA:"Москва", pointB:"Берлин", dist:1800,cost:8300,time:"1 день"},
-
-                ]
+                // data: [
+                //     { number:1, pointA:"Минск", pointB:"Владивосток", dist:14390,cost:12300,time:"3-5 дней"},
+                //     { number:2, pointA:"Москва", pointB:"Берлин", dist:1800,cost:8300,time:"1 день"},
+                //
+                // ]
             },
 
 ]
@@ -191,29 +192,29 @@ var orderHistory={
             select: "row",
             height:390,
             url:function(){
-                var user="gena";
+                var user=webix.storage.session.get("login");
                 return webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/userOrders/"+user).then(function(data){
                     return data.json();
                 });
             },
             columns:[
                 { id:"number",header:"№" ,width:30},
-                { id:"pointA",   header:"Начальная точка" ,width:200 },
-                { id:"pointB",    header:"Конечная точка" ,width:200  } ,
+                { id:"pointA",   header:"Начальная точка" ,width:250 },
+                { id:"pointB",    header:"Конечная точка" ,width:250  } ,
                 { id:"dist",   header:"Длина",width:100 },
                 { id:"cost",   header:"Стоимость",width:100 },
-                { id:"value",   header:"value",width:155 },
+                { id:"value",   header:"Объем",width:155 },
                 { id:"date",   header:"Дата заказа",width:200 },
-                { id:"date_1",   header:"Дата исполнения",width:200 },
+                { id:"date_1",   header:"",width:100 },
                 { id:"manager",   header:"Менеджер",width:155 },
                 { id:"status",   header:"Статус",width:155 },
             ],
 
-            data: [
-                { number:1, pointA:"Минск", pointB:"Владивосток", dist:14390,cost:12300,time:"3-5 дней",value:200,date:"20-07-2018 12:45",date_1:"20-07-2018 12:45", manager:"Иванов А.А.",status:"В работе"},
-                { number:2, pointA:"Москва", pointB:"Берлин", dist:1800,cost:8300,time:"1 день",value:200,date:"20-07-2018 12:45",date_1:"20-07-2018 12:45", manager:"Иванов А.А.",status:"В работе"},
-
-            ]
+            // data: [
+            //     { number:1, pointA:"Минск", pointB:"Владивосток", dist:14390,cost:12300,time:"3-5 дней",value:200,date:"20-07-2018 12:45",date_1:"20-07-2018 12:45", manager:"Иванов А.А.",status:"В работе"},
+            //     { number:2, pointA:"Москва", pointB:"Берлин", dist:1800,cost:8300,time:"1 день",value:200,date:"20-07-2018 12:45",date_1:"20-07-2018 12:45", manager:"Иванов А.А.",status:"В работе"},
+            //
+            // ]
         },
     ]
 
@@ -221,7 +222,7 @@ var orderHistory={
 function editUserInf() {
     if( $$("userForm").validate()){
         var formData=$$("userForm").getValues();
-        var user="gena";
+        var user=webix.storage.session.get("login");
         var usInf = JSON.stringify(formData, "", "\t");
         webix.ajax().headers({'Content-Type':'application/json;charset=utf-8','Accept':'application/json;charset=utf-8'}).post("http://localhost:8080/edit/"+user, usInf).then(function (result) {
             if (result.json().success == true) {
@@ -236,7 +237,7 @@ function editPas() {
     $$("pas").markInvalid("newPas2", "");
     if( $$("pas").validate()){
         var pasData=$$("pas").getValues();
-        var user="gena";
+        var user=webix.storage.session.get("login");
         var changePas = JSON.stringify(pasData, "", "\t");
         webix.ajax().headers({'Content-Type':'application/json;charset=utf-8','Accept':'application/json;charset=utf-8'}).post("http://localhost:8080/changePas/"+user, changePas).then(function (result) {
             if (result.json().success == true) {
@@ -264,7 +265,7 @@ var userInfo={
                 width:500,
                 borderless:true,
                 url:function(){
-                    var user="gena";              //брать из session storage!!!
+                    var user=webix.storage.session.get("login");              //брать из session storage!!!
                     return webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/userInf/"+user).then(function(data){
                         if(data.json().success==true)
                         return data.json();
@@ -382,7 +383,7 @@ webix.ready(function(){
                                     {
                                         css:"hi",
                                         view:"label",
-                                        label:"Приветствуем Вас, user!",
+                                        label:"Приветствуем Вас, "+webix.storage.session.get("login")+"!",
                                         inputWidth:300,
                                         align:"right"
                                     },
@@ -391,7 +392,7 @@ webix.ready(function(){
                                         view:"icon", icon:"fas fa-power-off",
                                         css:"exit",
                                         tooltip:"Выход",
-                                        click:"webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get('http://localhost:8080/userExit');"
+                                        click:"webix.send(\"http://localhost:8080/userExit\",{}, \"GET\");"
                                     }
                                 ]
                             },

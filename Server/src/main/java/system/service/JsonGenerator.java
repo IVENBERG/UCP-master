@@ -10,15 +10,18 @@ import java.util.Iterator;
 import java.util.List;
 
 public class JsonGenerator {
-    public JSONObject generateObjectForAllWays(Way way){
+    public JSONObject generateObjectForAllWays(WayInfo way){
         JSONObject viewPoint = new JSONObject();
-        Price price = new Price();
-        viewPoint.put("id", way.getPosition());
-        viewPoint.put("pointA", way.getLine().getStartPoint().getName());
-        viewPoint.put("pointB", way.getLine().getEndPoint().getName());
-        viewPoint.put("dist", way.getLine().getDistance());
-        viewPoint.put("cost", price.wayPrice(way));
-        viewPoint.put("time", price.wayTime(way));
+        double time = 0;
+        for(Way w : way.getWays()){
+            time = time + (way.getDistance()/w.getLine().getTransport().getSpeed());
+        }
+        viewPoint.put("id", way.getId());
+        viewPoint.put("pointA", way.getStart_point().getName());
+        viewPoint.put("pointB", way.getEnd_point().getName());
+        viewPoint.put("dist", way.getDistance());
+        viewPoint.put("cost", way.getCost());
+        viewPoint.put("time", time);
         return viewPoint;
     }
     public JSONObject generateObjectForWay(Way way){
@@ -79,16 +82,18 @@ public class JsonGenerator {
     public String generateAllUsers(List<User> userList){
         JSONArray employees = new JSONArray();
         JSONObject response = new JSONObject();
-        JSONObject object = new JSONObject();
 
-        for (Iterator<User> it = userList.iterator(); it.hasNext(); ) {
-            User user = it.next();
+
+        for(User user:userList)
+        {
+            JSONObject object = new JSONObject();
             String names = user.getSurname() + " " + user.getName();
             object.put("login", user.getLogin());
             object.put("fio", names);
-
+            System.out.println(object.toString());
             employees.put(object);
         }
+        System.out.println(employees.toString());
         response.put("success",true);
         response.put("data",employees);
 
@@ -127,11 +132,11 @@ public class JsonGenerator {
 
         return response.toString();
     }
-    public String generateAllWays(List<Way> wayList){
+    public String generateAllWays(List<WayInfo> wayList){
         JSONArray employees = new JSONArray();
         JSONObject response = new JSONObject();
 
-        for (Iterator<Way> it = wayList.iterator(); it.hasNext(); ) {
+        for (Iterator<WayInfo> it = wayList.iterator(); it.hasNext(); ) {
             employees.put(generateObjectForAllWays(it.next()));
         }
         response.put("success",true);
@@ -191,11 +196,13 @@ public class JsonGenerator {
             double time = 0;
             for(Way w : way.getWays()){
                 cost = cost + (w.getLine().getDistance()*w.getLine().getTransport().getKoeff()*volume);
+                System.out.println(w.getLine().getDistance() + " " +w.getLine().getTransport().getKoeff() + " " +volume);
                 time = time + (w.getLine().getDistance()/w.getLine().getTransport().getSpeed());
             }
+            System.out.println(cost);
             object.put("number", way.getId());
             object.put("cost", cost);
-            object.put("time", time);
+            object.put("time", time + "ч.");
             employees.put(object);
         }
         response.put("success",true);

@@ -149,9 +149,9 @@ public class UsersLogic {
 
         String point1 = actualObj.get("point1").textValue();
         String point2 = actualObj.get("point2").textValue();
-        double volume = actualObj.get("volume").doubleValue();
-
-        return jsonGenerator.generateSearch(point1,point2,volume);
+        String volume = actualObj.get("volume").textValue();
+        double v = Double.parseDouble(volume);
+        return jsonGenerator.generateSearch(point1,point2,v);
     }
     public String returnChangePass(String login, HttpEntity<String> request) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
@@ -219,7 +219,8 @@ public class UsersLogic {
             if(currentUser.getPassword().equals(pas)){
                 if(flag == 0){
                     response.put("success",true);
-                    response.put("role","user");
+                   // response.put("role","user");
+                    response.put("role",currentUser.getRole());
                     return response.toString();
                 }
                 else{
@@ -230,7 +231,7 @@ public class UsersLogic {
             }
             else{
                 response.put("success",false);
-                response.put("message","Ошибка авторизации, неверный пароль");
+                response.put("message","Ошибка авторизации, неверный пароль ");
                 return response.toString();
             }
         }
@@ -250,16 +251,23 @@ public class UsersLogic {
         String pas = actualObj.get("pas").textValue();
 
         User currentUser = userDAO.getUser(login);
+        if(currentUser != null) {
 
-        if(currentUser.getPassword().equals(pas)){
-            response.put("success",true);
-            return response.toString();
+            if (currentUser.getPassword().equals(pas)) {
+                response.put("success", true);
+                return response.toString();
+            } else {
+                response.put("success", false);
+                response.put("message", "Неверный логин или пароль");
+                return response.toString();
+            }
         }
         else{
-            response.put("success",false);
-            response.put("message","Неверный логин или пароль");
+            response.put("success", false);
+            response.put("message", "Неверный логин или пароль");
             return response.toString();
         }
+
     }
     public String returnNewOrder(String login, int way_id, int volume) throws IOException {
         JSONObject object = new JSONObject();
@@ -320,6 +328,39 @@ public class UsersLogic {
             user.setRole("user");
             user.setStatus("active");
             user.setSurname(secondName);
+            userDAO.add(user);
+
+            response.put("success",true);
+            return response.toString();
+        }
+        else{
+            response.put("success",false);
+            response.put("message","Такой логин уже существует");
+            return response.toString();
+        }
+
+    }
+    public String returnManagerReg(HttpEntity<String> request) throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode actualObj = mapper.readTree(request.getBody());
+        UserDAOImpl userDAO = new UserDAOImpl();
+        JSONObject response = new JSONObject();
+
+        String firstName=actualObj.get("name").textValue();
+        String log = actualObj.get("login").textValue();
+        String pasword = actualObj.get("pas").textValue();
+        String surname=actualObj.get("lastName").textValue();
+
+        User currentUser = userDAO.getUser(log);
+        if(currentUser == null){
+            User user = new User();
+
+            user.setPassword(pasword);
+            user.setLogin(log);
+            user.setName(firstName);
+            user.setRole("manager");
+            user.setStatus("active");
+            user.setSurname(surname);
             userDAO.add(user);
 
             response.put("success",true);

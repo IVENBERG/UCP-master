@@ -87,8 +87,8 @@ public class WayLogic {
     }
     public String returnAllWays(){
         JsonGenerator jsonGenerator = new JsonGenerator();
-        WayDAOImpl wayDAO = new WayDAOImpl();
-        List<Way> pointsList = wayDAO.getWay();
+        WayInfoDAOImpl wayDAO = new WayInfoDAOImpl();
+        List<WayInfo> pointsList = wayDAO.getWayInfo();
         return jsonGenerator.generateAllWays(pointsList);
     }
     public String returnWaysID(int id){
