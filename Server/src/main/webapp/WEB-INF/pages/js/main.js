@@ -363,8 +363,8 @@ var ways={
                 { id:"id",header:"№" ,width:70},
                 { id:"pointA",   header:"Начальная точка" ,width:300 },
                 { id:"pointB",    header:"Конечная точка" ,width:300  } ,
-                { id:"dist",   header:"Длина",width:155 },
-                { id:"cost",   header:"Стоимость",width:155 },
+                 { id:"dist",   header:"Длина",width:155 },
+                //{ id:"cost",   header:"Стоимость111",width:155 },
                 { id:"time",   header:"Время",width:155 },
                 { id: "del", header: "&nbsp;", template: "{common.yourButton()}",  width:50,},
             ],
@@ -405,11 +405,11 @@ var ways={
 
                 }
             },
-            data: [
-                { id:1, pointA:"Минск", pointB:"Владивосток", dist:14390,cost:12300,time:"3-5 дней"},
-                { id:2, pointA:"Москва", pointB:"Берлин", dist:1800,cost:8300,time:"1 день"},
+            // data: [
+            //     { id:1, pointA:"Минск", pointB:"Владивосток", dist:14390,cost:12300,time:"3-5 дней"},
+            //     { id:2, pointA:"Москва", pointB:"Берлин", dist:1800,cost:8300,time:"1 день"},
 
-            ]
+           // ]
         },
 
         {
@@ -419,23 +419,23 @@ var ways={
             scrollX: false,
             columns:[
                 { id:"pos",    header:"Позиция" ,width:100},
-                { id:"pointA",   header:"Точка А" ,width:300 },
-                { id:"pointB",    header:"Точка B" ,width:300  } ,
-                { id:"dist",   header:"Расстояние",width:155 },
+                { id:"firstpoint",   header:"Точка А" ,width:300 },
+                { id:"secondpoint",    header:"Точка B" ,width:300  } ,
+                { id:"distance",   header:"Расстояние",width:155 },
                 { id:"transport",   header:"Транспорт" ,width:100},
             ],
-            data: [
-                { pos:1, pointA:"Минск", pointB:"Москва", dist:600, transport:"Авто"},
-                { pos:2, pointA:"Москва", pointB:"Новосибирск", dist:5000, transport:"Самолет"},
-                { pos:3, pointA:"Новосибирск", pointB:"Владивосток", dist:8790, transport:"Самолет"},
-            ]
+            // data: [
+            //     { pos:1, pointA:"Минск", pointB:"Москва", dist:600, transport:"Авто"},
+            //     { pos:2, pointA:"Москва", pointB:"Новосибирск", dist:5000, transport:"Самолет"},
+            //     { pos:3, pointA:"Новосибирск", pointB:"Владивосток", dist:8790, transport:"Самолет"},
+            // ]
         },
     ]
 
 };
 function confirmOrder() {
     row=this.data.$masterId.row;
-    var idOrder=$$("order_inf").getItem(row).Id;
+    var idOrder=$$("order_inf").getItem(row).id;
     webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/order/"+idOrder+"/confirm").then(function (result) {
         if (result.json().success == true) {
             webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
@@ -448,7 +448,7 @@ function confirmOrder() {
 }
 function failOrder() {
     row=this.data.$masterId.row;
-    var idOrder=$$("order_inf").getItem(row).Id;
+    var idOrder=$$("order_inf").getItem(row).id;
     webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/order/"+idOrder+"/fail").then(function (result) {
         if (result.json().success == true) {
             webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
@@ -505,11 +505,11 @@ var orders ={
                 });
             },
             columns:[
-                { id:"Id",header:"№" ,width:70,tooltip:false,},
-                { id:"Time",   header:"Время",width:200,tooltip:false, },
+                { id:"id",header:"№" ,width:70,tooltip:false,},
+                { id:"time",   header:"Время",width:200,tooltip:false, },
                 { id:"idWay",   header:"ID маршрута",width:120 ,tooltip:false,},
-                { id:"Price",   header:"Стоимость",width:155 ,tooltip:false,},
-                { id:"Client",   header:"Клиент",width:155 ,tooltip:false,},
+                { id:"price",   header:"Стоимость",width:155 ,tooltip:false,},
+                { id:"client",   header:"Клиент",width:155 ,tooltip:false,},
                 { id: "ok", header: "&nbsp;", template: "{common.yourButton()}",  width:50,tooltip: "Подтвердить"},
                 { id: "del", header: "&nbsp;", template: "{common.del()}",  width:50,tooltip: "Отказ"},
 
@@ -535,12 +535,12 @@ var orders ={
 
                 }
             },
-            data: [
-                { Id:1, Time:"25-10-2018 10:42:35 AM", idWay:10, Price:14600, Client:"ООО Продторг"},
-                { Id:2, Time:"25-10-2018 10:42:35 AM", idWay:10, Price:14600, Client:"ООО Продторг"},
-                { Id:3, Time:"25-10-2018 10:42:35 AM", idWay:10, Price:14600, Client:"ООО Продторг"},
-
-            ]
+            // data: [
+            //     { Id:1, Time:"25-10-2018 10:42:35 AM", idWay:10, Price:14600, Client:"ООО Продторг"},
+            //     { Id:2, Time:"25-10-2018 10:42:35 AM", idWay:10, Price:14600, Client:"ООО Продторг"},
+            //     { Id:3, Time:"25-10-2018 10:42:35 AM", idWay:10, Price:14600, Client:"ООО Продторг"},
+            //
+            // ]
         },],
 
 }
@@ -587,12 +587,12 @@ var us={
                     click:blolckUser,
                 },
             },
-            data: [
-                 { login:"user123", fio:"Иванов Иван Иванович"},
-                 { login:"user777", fio:"Петров Петр Петрович"},
-                 { login:"vovka", fio:"Сидоров Владимир Сергеевич "},
-
-            ]
+            // data: [
+            //      { login:"user123", fio:"Иванов Иван Иванович"},
+            //      { login:"user777", fio:"Петров Петр Петрович"},
+            //      { login:"vovka", fio:"Сидоров Владимир Сергеевич "},
+            //
+            // ]
         },
         {height:20},
         {
@@ -638,12 +638,12 @@ var us={
                     click:unblockUser,
                 },
             },
-            data: [
-                { login:"user3445", fio:"Иванов Иван Иванович"},
-                { login:"valk20", fio:"Петров Петр Петрович"},
-                { login:"qwe123", fio:"Сидоров Владимир Сергеевич "},
-
-            ]
+            // data: [
+            //     { login:"user3445", fio:"Иванов Иван Иванович"},
+            //     { login:"valk20", fio:"Петров Петр Петрович"},
+            //     { login:"qwe123", fio:"Сидоров Владимир Сергеевич "},
+            //
+            // ]
         },
     ]},{}]
 }

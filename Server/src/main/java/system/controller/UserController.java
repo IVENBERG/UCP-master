@@ -138,4 +138,10 @@ public class UserController {
         UsersLogic usersLogic = new UsersLogic();
         return usersLogic.returnUserReg(request);
     }
+
+    @RequestMapping(value = "/addManager", method = RequestMethod.POST)
+    public @ResponseBody String addManager(HttpEntity<String> request) throws JSONException, IOException {
+        UsersLogic usersLogic = new UsersLogic();
+        return usersLogic.returnManagerReg(request);
+    }
 }

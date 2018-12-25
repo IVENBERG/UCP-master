@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
@@ -21,11 +22,9 @@ import java.io.IOException;
 public class MoveController {
 
     @RequestMapping(value = "/staffAuthStandart", method = RequestMethod.POST)
-    public @ResponseBody ModelAndView staffAuthStandart(HttpEntity<String> request) throws JSONException, IOException {
+    public @ResponseBody ModelAndView staffAuthStandart(@RequestBody MultiValueMap<String, String> formData) throws JSONException, IOException {
         ModelAndView modelAndView = new ModelAndView();
-        ObjectMapper mapper = new ObjectMapper();
-        JsonNode actualObj = mapper.readTree(request.getBody());
-        int flag = actualObj.get("flag").intValue();
+        int flag= Integer.parseInt(formData.getFirst("flag"));
         if(flag == 0 ){
             System.out.println("index");
             modelAndView.setViewName("index");
@@ -75,7 +74,7 @@ public class MoveController {
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public @ResponseBody ModelAndView user() throws IOException, JSONException {
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("logInStaff");
+        modelAndView.setViewName("logInUser");
         return modelAndView;
     }
 

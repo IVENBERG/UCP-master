@@ -132,4 +132,23 @@ public class User {
     public int hashCode() {
         return Objects.hash(idUser, login, password, name, surname, address, phone, email, role, status, orders);
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "idUser=" + idUser +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", address='" + address + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", role='" + role + '\'' +
+                ", status='" + status + '\'' +
+                ", orders=" + orders +
+                '}';
+    }
 }
+
+

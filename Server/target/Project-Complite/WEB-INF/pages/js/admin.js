@@ -55,12 +55,12 @@ var managers={
 
 
             },
-            data: [
-                { login:"user123", fio:"Иванов Иван Иванович"},
-                { login:"user777", fio:"Петров Петр Петрович"},
-                { login:"vovka", fio:"Сидоров Владимир Сергеевич "},
-
-            ]
+            // data: [
+            //     { login:"user123", fio:"Иванов Иван Иванович"},
+            //     { login:"user777", fio:"Петров Петр Петрович"},
+            //     { login:"vovka", fio:"Сидоров Владимир Сергеевич "},
+            //
+            // ]
         },
 
     ]
@@ -131,7 +131,7 @@ var senior={
             id:"senior",
             name:"senior",
             url:function(){
-                return webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/allSeniorManagers").then(function(data){
+                return webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get("http://localhost:8080/allSeniorManager").then(function(data){
                     return data.json();
                 });
             },
@@ -153,12 +153,12 @@ var senior={
                     click:lockSeniorManager,
                 },
             },
-            data: [
-                { login:"user3445", fio:"Иванов Иван Иванович"},
-                { login:"valk20", fio:"Петров Петр Петрович"},
-                { login:"qwe123", fio:"Сидоров Владимир Сергеевич "},
-
-            ]
+            // data: [
+            //     { login:"user3445", fio:"Иванов Иван Иванович"},
+            //     { login:"valk20", fio:"Петров Петр Петрович"},
+            //     { login:"qwe123", fio:"Сидоров Владимир Сергеевич "},
+            //
+            // ]
         },]
 }
 function unlock() {
@@ -170,7 +170,7 @@ function unlock() {
             $$("block_managers").clearAll(true);
             $$("senior").clearAll(true);
             $$("active_managers").loadNext(-1,0);
-            $$("block_manager").loadNext(-1,0);
+            $$("block_managers").loadNext(-1,0);
             $$("senior").loadNext(-1,0);
             webix.message({type: 'debug', text: "Зaпрос успешно добавлен"});
 
@@ -207,7 +207,7 @@ var block={
         columns:[
             { id:"login",    header:"Логин" ,width:100},
             { id:"fio",   header:"ФИО" ,width:300 },
-            { id:"status",header:"Должность" ,width:100},
+            { id:"role",header:"Должность" ,width:100},
             { id: "unblock", header: "&nbsp;", template: "{common.yourButton()}",  width:40,},
         ],
         activeContent: {
@@ -222,12 +222,12 @@ var block={
                 click:unlock,
             },
         },
-        data: [
-            { login:"user3445", fio:"Иванов Иван Иванович",status:"manager"},
-            { login:"valk20", fio:"Петров Петр Петрович",status:"senior"},
-            { login:"qwe123", fio:"Сидоров Владимир Сергеевич ",status:"manager"},
-
-        ]
+        // data: [
+        //     { login:"user3445", fio:"Иванов Иван Иванович",status:"manager"},
+        //     { login:"valk20", fio:"Петров Петр Петрович",status:"senior"},
+        //     { login:"qwe123", fio:"Сидоров Владимир Сергеевич ",status:"manager"},
+        //
+        // ]
     },]
 
 }
@@ -263,7 +263,7 @@ webix.ready(function() {
                         icon:"fas fa-power-off",
                         css:"exit",
                         tooltip:"Выход",
-                        click:"webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get('http://localhost:8080/adminExit');"
+                        click:"webix.send(\"http://localhost:8080/managerExit\",{}, \"GET\");"
                     }
                 ]
 

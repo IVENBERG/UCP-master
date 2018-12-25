@@ -41,12 +41,12 @@ var managers={
                             click:lockManager,
                         },
                     },
-                    data: [
-                        { login:"user123", fio:"Иванов Иван Иванович"},
-                        { login:"user777", fio:"Петров Петр Петрович"},
-                        { login:"vovka", fio:"Сидоров Владимир Сергеевич "},
-
-                    ]
+                    // data: [
+                    //     { login:"user123", fio:"Иванов Иван Иванович"},
+                    //     { login:"user777", fio:"Петров Петр Петрович"},
+                    //     { login:"vovka", fio:"Сидоров Владимир Сергеевич "},
+                    //
+                    // ]
                 },
 
     ]
@@ -125,12 +125,12 @@ var block={
                         click:unlockManager,
                     },
                 },
-                data: [
-                    { login:"user3445", fio:"Иванов Иван Иванович"},
-                    { login:"valk20", fio:"Петров Петр Петрович"},
-                    { login:"qwe123", fio:"Сидоров Владимир Сергеевич "},
-
-                ]
+                // data: [
+                //     { login:"user3445", fio:"Иванов Иван Иванович"},
+                //     { login:"valk20", fio:"Петров Петр Петрович"},
+                //     { login:"qwe123", fio:"Сидоров Владимир Сергеевич "},
+                //
+                // ]
             },]
 }
 function addManager(){
@@ -166,7 +166,7 @@ webix.ready(function() {
                       icon:"fas fa-power-off",
                       css:"exit",
                       tooltip:"Выход",
-                      click:"webix.ajax().headers({'Accept':'application/json;charset=utf-8'}).get('http://localhost:8080/managerExit');"
+                      click:"webix.send(\"http://localhost:8080/managerExit\",{}, \"GET\");"
                     }
                 ]
 
